@@ -21,5 +21,18 @@ class Admin extends Controller {
             header('Location: ' . BASEURL . '/admin/index');    
         }
     }
+
+    public function uploadImage() {
+        $model = $this->model('Admin_Model'); 
+        $result = $model->addCarousel($_POST);  
+        if ($result == 0) {
+            $error = $model->error; 
+            $this->view('template/header');
+            $this->view('admin/index', ['error' => $error]); 
+            $this->view('template/footer');
+        } else {
+            header('Location: ' . BASEURL . '/admin/index');    
+        }
+    }
     
 }

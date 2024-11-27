@@ -1,15 +1,26 @@
 <main class="bg-white">
-    <!-- Hero Section -->
-    <section class="relative">
-        <img
-            alt="School Banner"
-            class="w-full"
-            height="400"
-            src="https://storage.googleapis.com/a1aa/image/wIdWe3YpleiNOUeaWfsocz9xpkRjtsJk1nPiBIwjAJ5FA5QPB.jpg"
-            width="1200"
-        />
+<!-- Hero Section -->
+<section class="relative h-screen md:h-[600px] overflow-hidden">
+        <div class="relative w-full h-full">
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img alt="School Banner 1" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/KxmxYndQveVfbkb2Y7lJGQ8ygIAXz1IInGOdgtn7vzMPYK1TA.jpg" />
+                </div>
+                <div class="carousel-item">
+                    <img alt="School Banner 2" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/OBM05HkZM7LvNB4kjc4VYTj5yECqYUA79eA33Nxe2VZUYK1TA.jpg" />
+                </div>
+                <div class="carousel-item">
+                    <img alt="School Banner 3" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/5OaPJw49js78BxqjHSGGWWLybHLYePxiUDzzkX7Gt5bFMl6JA.jpg" />
+                </div>
+            </div>
+            <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </section>
-    <!-- Information Section -->
     <section class="container mx-auto py-8">
         <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
             INFORMASI SD NEGERI DINOYO 4
@@ -62,3 +73,35 @@
         </div>
     </section>
 </main>
+<script>
+   const carousel = document.querySelector('.carousel');
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+    let currentIndex = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+        items[currentIndex].classList.remove('block');
+        items[currentIndex].classList.add('hidden');
+        currentIndex = (currentIndex + 1) % totalItems;
+        items[currentIndex].classList.remove('hidden');
+        items[currentIndex].classList.add('block');
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+        items[currentIndex].classList.remove('block');
+        items[currentIndex].classList.add('hidden');
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        items[currentIndex].classList.remove('hidden');
+        items[currentIndex].classList.add('block');
+    });
+
+    // Initialize carousel
+    items.forEach((item, index) => {
+        if (index !== 0) {
+            item.classList.add('hidden');
+        } else {
+            item.classList.add('block');
+        }
+    });
+  </script>
+ 

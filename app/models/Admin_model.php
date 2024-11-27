@@ -25,6 +25,22 @@ class Admin_Model {
         return $this->db->rowCount();
     }
 
+    public function addCarousel ($data) {
+        $query = "INSERT INTO carousel (img) VALUES (:img)";
+        $img = $this->uploadImage();
+
+        if (!$img) {
+            return false;
+        }
+
+        $this->db->query($query);
+        $this->db->bind('img', $img);
+        $this->db->execute();
+        return $this->db->rowCount();
+
+
+    }
+
     public function uploadImage () {
         $target_dir = $_SERVER['DOCUMENT_ROOT'] .'/rpl-web/public/img/';
         $target_file = $target_dir . basename($_FILES["picture"]["name"]);
