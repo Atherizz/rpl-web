@@ -7,4 +7,19 @@ class Admin extends Controller {
         $this->view('admin/index');
         $this->view('template/footer');
     }
+
+
+    public function uploadNews() {
+        $model = $this->model('Admin_Model'); 
+        $result = $model->addNews($_POST);  
+        if ($result == 0) {
+            $error = $model->error; 
+            $this->view('template/header');
+            $this->view('admin/index', ['error' => $error]); 
+            $this->view('template/footer');
+        } else {
+            header('Location: ' . BASEURL . '/admin/index');    
+        }
+    }
+    
 }

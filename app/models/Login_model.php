@@ -23,6 +23,9 @@ class Login_model {
         if ($ambilUser) {
             if ($password == $ambilUser['password']) {
                 return true;
+            } else {
+                return "username / password salah!";
+
             }
         }
 
