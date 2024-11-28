@@ -4,3 +4,10 @@ CREATE TABLE ekstrakurikuler (
     gambar VARCHAR(255) NOT NULL,
     deskripsi TEXT NOT NULL,
 );
+INSERT INTO ekstrakurikuler (nama_ekskul, gambar, deskripsi) 
+VALUES 
+(
+    'Pramuka', 
+    'pramuka.png', 
+    'Ekstrakurikuler Pramuka bertujuan untuk membentuk karakter disiplin, tanggung jawab, serta cinta tanah air. Melalui kegiatan ini, siswa dilatih untuk menjadi pemimpin yang tangguh dan mampu bekerja sama dalam tim.'
+);
