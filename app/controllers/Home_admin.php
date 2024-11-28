@@ -17,17 +17,10 @@ class Home_admin extends Controller {
     }
     }
 
-    public function editNews() {
-        // $model = $this->model('Home_Admin_model'); 
-        // $result = $model->edit($_POST);  
-        // if ($result == 0) {
-        //     $this->view('template/header_admin');
-        //     $this->view('home_admin/index'); 
-        // } else {
-        //     header('Location: ' . BASEURL . '/home_admin/index');    
-        // }
+    public function editNews($id) {
+        $data['news'] = $this->model('Home_admin_model')->getNewsById($id);
         $this->view('template/header_admin');
-        $this->view('home_admin/edit');
+        $this->view('home_admin/edit', $data);
     }
 
     public function editById() {

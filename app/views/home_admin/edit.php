@@ -5,6 +5,7 @@
       </h1>
       <div class="bg-white rounded-lg shadow-md p-6">
         <form method="POST" action="<?=BASEURL?>/home_admin/editById"  enctype="multipart/form-data" >
+          <input type="hidden" name="id" value="<?= $data['news']['id'] ?>" >
           <div class="mb-4">
             <label
               class="block text-gray-700 text-sm font-bold mb-2"
@@ -15,7 +16,7 @@
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="judul" name="title"
-              type="text"
+              type="text" value="<?= $data['news']['title'] ?>"
               placeholder="Masukkan judul berita"
             />
           </div>
@@ -28,7 +29,7 @@
             </label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="tanggal"
+              id="tanggal" value="<?= $data['news']['date'] ?>"
               type="date" name="date"
             />
           </div>
@@ -41,24 +42,24 @@
             </label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="gambar"
-              type="file" name="img"
-              accept="image/*"
+              id="gambar" value="<?= $data['news']['img'] ?>"
+              type="file" name="img" 
+              accept="image/*" required
             />
           </div>
           <div class="mb-4">
             <label
               class="block text-gray-700 text-sm font-bold mb-2"
-              for="teks" name="word"
+              for="teks" 
             >
               Teks Berita
             </label>
-            <textarea
+            <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="teks"
+              id="teks" name="word" value="<?= $data['news']['word'] ?>"
               rows="5"
               placeholder="Masukkan teks berita"
-            ></textarea>
+            ></input>
           </div>
           <div class="flex items-center justify-between">
             <button
