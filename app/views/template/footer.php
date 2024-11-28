@@ -5,7 +5,7 @@
             alt="School Logo"
             class="mx-auto md:mx-0 mb-4"
             height="100"
-            src="https://storage.googleapis.com/a1aa/image/h5aAwsFOFYINNZ8DeFQ7T0ozG6pxcsH1Ehr7qEWj3DBfPO0TA.jpg"
+            src="<?=BASEURL ?>/img/logo-sd.png"
             width="100"
           />
           <h3 class="text-xl font-bold">SD NEGERI DINOYO 4</h3>

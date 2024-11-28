@@ -1,17 +1,13 @@
 <main class="bg-white">
 <!-- Hero Section -->
 <section class="relative h-screen md:h-[600px] overflow-hidden">
-        <div class="relative w-full h-full">
-            <div class="carousel">
+    <div class="relative w-full h-full">
+        <div class="carousel">
+                <?php foreach ($data['carousel'] as $row)  : ?>
                 <div class="carousel-item">
-                    <img alt="School Banner 1" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/KxmxYndQveVfbkb2Y7lJGQ8ygIAXz1IInGOdgtn7vzMPYK1TA.jpg" />
+                    <img alt="School Banner 1" class="w-full h-full object-cover" src="<?=BASEURL?>/img/<?=$row['img']?>" />
                 </div>
-                <div class="carousel-item">
-                    <img alt="School Banner 2" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/OBM05HkZM7LvNB4kjc4VYTj5yECqYUA79eA33Nxe2VZUYK1TA.jpg" />
-                </div>
-                <div class="carousel-item">
-                    <img alt="School Banner 3" class="w-full h-full object-cover" src="https://storage.googleapis.com/a1aa/image/5OaPJw49js78BxqjHSGGWWLybHLYePxiUDzzkX7Gt5bFMl6JA.jpg" />
-                </div>
+                <?php endforeach; ?>
             </div>
             <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="prev">
                 <i class="fas fa-chevron-left"></i>

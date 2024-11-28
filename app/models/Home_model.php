@@ -9,6 +9,11 @@ class Home_model {
         $this->db->query("SELECT * FROM article");
         return $this->db->resultSet();
     }
+
+    public function getAllCarousel() {
+        $this->db->query("SELECT * FROM carousel");
+        return $this->db->resultSet();
+    }
 }
 
 ?>

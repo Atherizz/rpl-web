@@ -20,7 +20,7 @@
             alt="School Logo"
             class="h-10 w-10 mr-2"
             height="50"
-            src="https://storage.googleapis.com/a1aa/image/h5aAwsFOFYINNZ8DeFQ7T0ozG6pxcsH1Ehr7qEWj3DBfPO0TA.jpg"
+            src="<?=BASEURL ?>/img/logo-sd.png"
             width="50"
           />
           <h1 class="text-xl font-bold">SDN DINOYO 4</h1>
@@ -29,7 +29,7 @@
         <a class="hover:text-gray-300" href="<?=BASEURL?>/home"> Home </a>
           <a class="hover:text-gray-300" href="<?=BASEURL?>/about"> Tentang Kami </a>
           <a class="hover:text-gray-300" href="<?=BASEURL?>/akademik"> Akademik </a>
-          <a class="hover:text-gray-300" href="<?=BASEURL?>/ksesiswaan""> Kesiswaan </a>
+          <a class="hover:text-gray-300" href="<?=BASEURL?>/kesiswaan""> Kesiswaan </a>
           <a class="hover:text-gray-300" href="<?=BASEURL?>/kontak""> Kontak </a>
           <a class="hover:text-gray-300" href="<?=BASEURL?>/login"> Login </a>
         </nav>
