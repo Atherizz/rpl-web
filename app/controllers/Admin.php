@@ -7,7 +7,6 @@ class Admin extends Controller {
         $this->view('admin/index');
     }
 
-
     public function uploadNews() {
         $model = $this->model('Admin_Model'); 
         $result = $model->addNews($_POST);  
