@@ -18,7 +18,7 @@ class Admin_Model {
         $this->db->query($query);
         $this->db->bind('date', $data['date']);
         $this->db->bind('title', $data['title']);
-        $this->db->bind('img', $this->uploadImage());
+        $this->db->bind('img', $image);
         $this->db->bind('word', $data['word']);
 
         $this->db->execute();
@@ -32,7 +32,6 @@ class Admin_Model {
         if (!$img) {
             return false;
         }
-
         $this->db->query($query);
         $this->db->bind('img', $img);
         $this->db->execute();
@@ -57,12 +56,12 @@ class Admin_Model {
             return false;
         }
     
-        // memeriksa apakah file sudah ada
-        if (file_exists($target_file)) {
-            $uploadOk = 0;
-            $this->error = "file already exist!";
-            return false;
-        }
+        // // memeriksa apakah file sudah ada
+        // if (file_exists($target_file)) {
+        //     $uploadOk = 0;
+        //     $this->error = "file already exist!";
+        //     return false;
+        // }
     
         if ($_FILES["picture"]["size"] > 50000000) {
             $uploadOk = 0;
@@ -80,9 +79,13 @@ class Admin_Model {
             return basename($_FILES["picture"]["name"]);
             } else {
             $this->error = "there was an error while uploading!";
-            return false;
-            
+            return false;   
         }
+
+        if (!is_dir($target_dir) || !is_writable($target_dir)) {
+            die("Upload directory is not writable or does not exist: " . $target_dir);
+        }
+        
         
     }
 

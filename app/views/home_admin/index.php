@@ -2,6 +2,9 @@
     <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
         INFORMASI SD NEGERI DINOYO 4
     </h2>
+    <?php if (isset($data['info'])) : ?>
+    <p class="text-red-600 hover:underline"><?= $data['info'] ?></p>
+    <?php endif; ?>
     <div class="flex flex-wrap justify-center gap-8">
         <!-- News Item -->
         <?php foreach ($data['news'] as $row) : ?>
@@ -23,8 +26,8 @@
                     </a>
                 </div>
                 <div class="flex justify-between p-4 border-t">
-                    <a href="<?= BASEURL; ?>/edit/<?= $row['id'] ?>" class="text-blue-600 hover:underline">Edit</a>
-                    <a href="<?= BASEURL; ?>/delete/<?= $row['id'] ?>" class="text-red-600 hover:underline">Delete</a>
+                    <a href="<?= BASEURL; ?>/home_admin/editNews/<?= $row['id'] ?>" class="text-blue-600 hover:underline">Edit</a>
+                    <a href="<?= BASEURL; ?>/home_admin/deleteNews/<?= $row['id'] ?>" class="text-red-600 hover:underline" onclick="return confirm('apakah anda yakin ingin menghapus berita?')">Delete</a>
                 </div>
             </div>
         <?php endforeach ?>

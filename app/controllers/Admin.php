@@ -5,7 +5,6 @@ class Admin extends Controller {
         $data['judul'] = 'admin';
         $this->view('template/header_admin', $data);
         $this->view('admin/index');
-        $this->view('template/footer');
     }
 
 
@@ -16,7 +15,6 @@ class Admin extends Controller {
             $error = $model->error; 
             $this->view('template/header_admin');
             $this->view('admin/index', ['error' => $error]); 
-            $this->view('template/footer');
         } else {
             header('Location: ' . BASEURL . '/admin/index');    
         }
@@ -29,7 +27,6 @@ class Admin extends Controller {
             $error = $model->error; 
             $this->view('template/header_admin');
             $this->view('admin/index', ['error' => $error]); 
-            $this->view('template/footer');
         } else {
             header('Location: ' . BASEURL . '/admin/index');    
         }
