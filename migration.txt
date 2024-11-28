@@ -1,0 +1,6 @@
+CREATE TABLE ekstrakurikuler (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama_ekskul VARCHAR(100) NOT NULL,
+    gambar VARCHAR(255) NOT NULL,
+    deskripsi TEXT NOT NULL,
+);

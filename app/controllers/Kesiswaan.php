@@ -1,10 +1,11 @@
-<?php 
-Class Kesiswaan extends Controller {
+<?php
+class Kesiswaan extends Controller
+{
 
-    public function index () {
+    public function index()
+    {
+        $data['data'] = $this->model('Ekskul_model')->getAllEkskul();
         $this->view('template/header');
-        // $this->view('template/footer');
+        $this->view('kesiswaan/index', $data);
     }
 }
-
-?>
