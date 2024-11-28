@@ -3,7 +3,7 @@ class Admin extends Controller {
     public function index() {
         
         $data['judul'] = 'admin';
-        $this->view('template/header', $data);
+        $this->view('template/header_admin', $data);
         $this->view('admin/index');
         $this->view('template/footer');
     }
@@ -14,7 +14,7 @@ class Admin extends Controller {
         $result = $model->addNews($_POST);  
         if ($result == 0) {
             $error = $model->error; 
-            $this->view('template/header');
+            $this->view('template/header_admin');
             $this->view('admin/index', ['error' => $error]); 
             $this->view('template/footer');
         } else {
@@ -27,7 +27,7 @@ class Admin extends Controller {
         $result = $model->addCarousel($_POST);  
         if ($result == 0) {
             $error = $model->error; 
-            $this->view('template/header');
+            $this->view('template/header_admin');
             $this->view('admin/index', ['error' => $error]); 
             $this->view('template/footer');
         } else {
