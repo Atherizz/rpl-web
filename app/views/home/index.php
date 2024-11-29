@@ -1,12 +1,12 @@
 <main class="bg-white">
-<!-- Hero Section -->
-<section class="relative h-screen md:h-[600px] overflow-hidden">
-    <div class="relative w-full h-full">
-        <div class="carousel">
-                <?php foreach ($data['carousel'] as $row)  : ?>
-                <div class="carousel-item">
-                    <img alt="School Banner 1" class="w-full h-full object-cover" src="<?=BASEURL?>/img/news/<?=$row['img']?>" />
-                </div>
+    <!-- Hero Section -->
+    <section class="relative h-screen md:h-[600px] overflow-hidden">
+        <div class="relative w-full h-full">
+            <div class="carousel">
+                <?php foreach ($data['carousel'] as $row) : ?>
+                    <div class="carousel-item">
+                        <img alt="School Banner 1" class="w-full h-full object-cover" src="<?= BASEURL ?>/img/carousel/<?= $row['img'] ?>" />
+                    </div>
                 <?php endforeach; ?>
             </div>
             <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="prev">
@@ -29,15 +29,14 @@
                         alt="School Event"
                         class="h-80 object-cover"
                         src="<?= BASEURL; ?>/img/news/<?= $row['img'] ?>"
-                        width="400"
-                    />
+                        width="400" />
                     <div class="p-4 flex-1">
                         <p class="text-gray-500 text-sm"><?= $row['date'] ?></p>
                         <h3 class="text-xl font-bold text-green-800"><?= $row['title'] ?></h3>
                         <p class="text-gray-700">
                             <?= implode(' ', array_slice(explode(' ', $row['word']), 0, 20)) . (str_word_count($row['word']) > 50 ? '...' : ''); ?>
                         </p>
-                        <a class="text-green-800 hover:underline" href="<?=BASEURL?>/home/detail/<?=$row['id'] ?>">
+                        <a class="text-green-800 hover:underline" href="<?= BASEURL ?>/home/detail/<?= $row['id'] ?>">
                             Baca Selengkapnya
                         </a>
                     </div>
@@ -70,7 +69,7 @@
     </section>
 </main>
 <script>
-   const carousel = document.querySelector('.carousel');
+    const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;
     let currentIndex = 0;
@@ -99,5 +98,4 @@
             item.classList.add('block');
         }
     });
-  </script>
- 
+</script>
