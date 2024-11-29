@@ -61,6 +61,9 @@
        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
         Sejarah
        </a>
+       <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL?>/guru">
+        Data Guru
+       </a>
       </div>
      </div>
      <div class="relative dropdown">

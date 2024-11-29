@@ -8,6 +8,24 @@ class manage_ekskul_admin extends Controller
         $this->view('template/header_admin');
         $this->view('manage_ekskul_admin/index', $data);
     }
+
+    public function tambah() {
+        $this->view('template/header_admin');
+    $this->view('manage_ekskul_admin/tambah');   
+    }
+
+    public function uploadEkskul()
+    {
+        $model = $this->model('Ekskul_model');
+        $result = $model->addEkskul($_POST);
+        if ($result == 0) {
+            $error = $model->error;
+            $this->view('template/header_admin');
+            $this->view('manage_ekskul_admin/tambah', ['error' => $error]);
+        } else {
+            header('Location: ' . BASEURL . '/manage_ekskul_admin/index');
+        }
+    }
     public function detailEkskul($id)
     {
         $data['data'] = $this->model('Ekskul_model')->getEkskulById($id);

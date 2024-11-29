@@ -18,7 +18,7 @@
         <div class="bg-white shadow-lg rounded-lg overflow-hidden">
             <!-- Image Section -->
             <div class="flex justify-center">
-                <img src="/rpl-web/public/img/ekskul/<?= $data['data']['gambar'] ?>" class="object-cover rounded-lg mt-5 h-64">
+                <img src="/rpl-web/public/img/ekskul/<?= $data['data']['img'] ?>" class="object-cover rounded-lg mt-5 h-64">
             </div>
 
             <!-- Description Section -->
