@@ -36,8 +36,6 @@ class Admin_Model {
         $this->db->bind('img', $img);
         $this->db->execute();
         return $this->db->rowCount();
-
-
     }
 
     public function uploadImage () {
