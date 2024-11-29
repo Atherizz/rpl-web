@@ -87,26 +87,6 @@
                 </form>
             </div>
 
-            <!-- Upload Prestasi Section -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-bold mb-4">Upload Prestasi</h3>
-                <form>
-                    <div class="mb-4">
-                        <label for="prestasi-judul" class="block text-gray-700 font-bold mb-2">Judul Prestasi:</label>
-                        <input type="text" id="prestasi-judul" name="prestasi-judul" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800">
-                    </div>
-                    <div class="mb-4">
-                        <label for="prestasi-tanggal" class="block text-gray-700 font-bold mb-2">Tanggal:</label>
-                        <input type="date" id="prestasi-tanggal" name="prestasi-tanggal" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800">
-                    </div>
-                    <div class="mb-4">
-                        <label for="prestasi-gambar" class="block text-gray-700 font-bold mb-2">Upload Gambar:</label>
-                        <input type="file" id="prestasi-gambar" name="prestasi-gambar" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800">
-                    </div>
-                    <button type="submit" class="bg-green-800 text-white px-4 py-2 rounded-lg hover:bg-green-700">Upload Prestasi</button>
-                </form>
-            </div>
-        </div>
     </main>
 </body>
 

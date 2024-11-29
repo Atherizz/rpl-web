@@ -15,6 +15,20 @@ class Home_Admin_model {
     }
 
     public function delete($id) {
+        $query = "SELECT img FROM article WHERE id = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+        $this->db->execute();
+        $gambar = $this->db->single()['img'];
+
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/rpl-web/public/img/news/';
+        $target_file = $target_dir . $gambar;
+
+        // Hapus file gambar jika ada
+        if (file_exists($target_file)) {
+            unlink($target_file);
+        }
+
         $query = "DELETE FROM article WHERE id = :id";
         $this->db->query($query);
         $this->db->bind('id', $id);
@@ -24,7 +38,7 @@ class Home_Admin_model {
     }
 
     public function edit($data) {
-        $target_dir = $_SERVER['DOCUMENT_ROOT'] .'/rpl-web/public/img/';
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] .'/rpl-web/public/img/news/';
         $target_file = $target_dir . basename($_FILES["img"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
