@@ -5,7 +5,7 @@
         <div class="carousel">
                 <?php foreach ($data['carousel'] as $row)  : ?>
                 <div class="carousel-item">
-                    <img alt="School Banner 1" class="w-full h-full object-cover" src="<?=BASEURL?>/img/<?=$row['img']?>" />
+                    <img alt="School Banner 1" class="w-full h-full object-cover" src="<?=BASEURL?>/img/news/<?=$row['img']?>" />
                 </div>
                 <?php endforeach; ?>
             </div>

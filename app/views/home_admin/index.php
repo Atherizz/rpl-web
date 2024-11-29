@@ -12,7 +12,7 @@
                 <img
                     alt="School Event"
                     class="h-80 object-cover"
-                    src="<?= BASEURL; ?>/img/<?= $row['img'] ?>"
+                    src="<?= BASEURL; ?>/img/news/<?= $row['img'] ?>"
                     width="400"
                 />
                 <div class="p-4 flex-1">

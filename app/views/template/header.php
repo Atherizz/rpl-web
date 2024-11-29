@@ -20,7 +20,7 @@
             alt="School Logo"
             class="h-10 w-10 mr-2"
             height="50"
-            src="<?=BASEURL ?>/img/logo-sd.png"
+            src="<?=BASEURL ?>/img/asset/logo-sd.png"
             width="50"
           />
           <h1 class="text-xl font-bold">SDN DINOYO 4</h1>
