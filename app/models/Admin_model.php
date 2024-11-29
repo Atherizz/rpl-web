@@ -47,11 +47,11 @@ class Admin_Model
     public function uploadImage($path)
     {
         $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/rpl-web/public/img/' . $path . '/';
-        $target_file = $target_dir . basename($_FILES["picture"]["name"]);
+        $target_file = $target_dir . basename($_FILES["img"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-        $check = getimagesize($_FILES["picture"]["tmp_name"]);
+        $check = getimagesize($_FILES["img"]["tmp_name"]);
 
         if ($check !== false) {
             $uploadOk = 1;
@@ -61,14 +61,8 @@ class Admin_Model
             return false;
         }
 
-        // // memeriksa apakah file sudah ada
-        // if (file_exists($target_file)) {
-        //     $uploadOk = 0;
-        //     $this->error = "file already exist!";
-        //     return false;
-        // }
 
-        if ($_FILES["picture"]["size"] > 50000000) {
+        if ($_FILES["img"]["size"] > 50000000) {
             $uploadOk = 0;
             $this->error = "sorry, your file is too large!";
             return false;
@@ -80,8 +74,8 @@ class Admin_Model
             return false;
         }
 
-        if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
-            return basename($_FILES["picture"]["name"]);
+        if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+            return basename($_FILES["img"]["name"]);
         } else {
             $this->error = "there was an error while uploading!";
             return false;

@@ -7,6 +7,37 @@ class Home_admin extends Controller {
     $this->view('home_admin/index', $data);
     }
 
+    public function tambah() {
+        $this->view('template/header_admin');
+    $this->view('home_admin/tambah');   
+    }
+
+    public function uploadNews()
+    {
+        $model = $this->model('Home_Admin_Model');
+        $result = $model->addNews($_POST);
+        if ($result == 0) {
+            $error = $model->error;
+            $this->view('template/header_admin');
+            $this->view('home_admin/index', ['error' => $error]);
+        } else {
+            header('Location: ' . BASEURL . '/home_admin/index');
+        }
+    }
+
+    public function uploadImage()
+    {
+        $model = $this->model('Home_admin_Model');
+        $result = $model->addCarousel($_POST);
+        if ($result == 0) {
+            $error = $model->error;
+            $this->view('template/header_admin');
+            $this->view('home_admin/index', ['error' => $error]);
+        } else {
+            header('Location: ' . BASEURL . '/home_admin/index');
+        }
+    }
+
     public function deleteNews($id) {
     if ($this->model('Home_Admin_model')->delete($id) > 0) {
         $data['info'] = "Berhasil Terhapus";

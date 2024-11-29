@@ -1,22 +1,22 @@
-  <body class="bg-gray-100">
+<body class="bg-gray-100">
     <div class="container mx-auto p-4">
       <h1 class="text-center text-2xl font-bold text-green-700 mb-8">
-        Edit Berita
+       Tambah Data Berita
       </h1>
       <div class="bg-white rounded-lg shadow-md p-6">
-        <form method="POST" action="<?=BASEURL?>/home_admin/editById"  enctype="multipart/form-data" >
-          <input type="hidden" name="id" value="<?= $data['news']['id'] ?>" >
+        <form method="POST" action="<?= BASEURL ?>/home_admin/uploadNews" enctype="multipart/form-data" >
+          <input type="hidden" name="id" >
           <div class="mb-4">
             <label
               class="block text-gray-700 text-sm font-bold mb-2"
               for="judul"
             >
               Judul
-            </label>
+            </label> 
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="judul" name="title"
-              type="text" value="<?= $data['news']['title'] ?>"
+              type="text" 
               placeholder="Masukkan judul berita"
             />
           </div>
@@ -29,7 +29,7 @@
             </label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="tanggal" value="<?= $data['news']['date'] ?>"
+              id="tanggal" 
               type="date" name="date"
             />
           </div>
@@ -42,7 +42,7 @@
             </label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="gambar" value="<?= $data['news']['img'] ?>"
+              id="gambar" 
               type="file" name="img" 
               accept="image/*" required
             />
@@ -56,7 +56,7 @@
             </label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="teks" name="word" value="<?= $data['news']['word'] ?>"
+              id="teks" name="word" 
               rows="5"
               placeholder="Masukkan teks berita"
             ></input>
