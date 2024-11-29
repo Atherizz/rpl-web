@@ -49,19 +49,20 @@
         <div class="container mx-auto text-center">
             <h2 class="text-2xl font-bold mb-8">SD NEGERI DINOYO 4</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
+                <div class = "animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
-                    <p class="text-4xl font-bold">335</p>
+                    <!-- Kalau mau ubah tampilan jumlah di dalam data target -->
+                    <p class="text-4xl font-bold" data-target="355">0</p> 
                     <p>Jumlah Peserta Didik</p>
                 </div>
-                <div>
+                <div class = "animate-count">
                     <i class="fas fa-chalkboard-teacher text-4xl mb-2"> </i>
-                    <p class="text-4xl font-bold">24</p>
+                    <p class="text-4xl font-bold" data-target="24">0</p>
                     <p>Jumlah Guru</p>
                 </div>
-                <div>
+                <div class = "animate-count">
                     <i class="fas fa-users text-4xl mb-2"> </i>
-                    <p class="text-4xl font-bold">12</p>
+                    <p class="text-4xl font-bold" data-target="12">0</p>
                     <p>Jumlah Karyawan</p>
                 </div>
             </div>
@@ -69,33 +70,62 @@
     </section>
 </main>
 <script>
+    // Count Animation
+    const countElements = document.querySelectorAll('.animate-count');
+
+countElements.forEach(element => {
+    const targetNumber = parseInt(element.querySelector('p[data-target]').getAttribute('data-target'));
+    const countElement = element.querySelector('p');
+
+    let start = 0;
+    const increment = targetNumber / 75;
+    const interval = setInterval(() => {
+        start += increment;
+        countElement.textContent = Math.round(start);
+
+        if (start >= targetNumber) {
+            clearInterval(interval);
+            countElement.textContent = targetNumber;
+        }
+    }, 10); // Speed animation
+});
+    // carousel
     const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;
     let currentIndex = 0;
 
     document.getElementById('next').addEventListener('click', () => {
-        items[currentIndex].classList.remove('block');
-        items[currentIndex].classList.add('hidden');
+        items[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % totalItems;
-        items[currentIndex].classList.remove('hidden');
-        items[currentIndex].classList.add('block');
+        items[currentIndex].classList.add('active');
     });
 
     document.getElementById('prev').addEventListener('click', () => {
-        items[currentIndex].classList.remove('block');
-        items[currentIndex].classList.add('hidden');
+        items[currentIndex].classList.remove('active');
         currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-        items[currentIndex].classList.remove('hidden');
-        items[currentIndex].classList.add('block');
+        items[currentIndex].classList.add('active');
     });
 
     // Initialize carousel
     items.forEach((item, index) => {
         if (index !== 0) {
-            item.classList.add('hidden');
+            item.classList.remove('active');
         } else {
-            item.classList.add('block');
+            item.classList.add('active');
         }
     });
 </script>
+<style>
+    .carousel-item {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+</style>
