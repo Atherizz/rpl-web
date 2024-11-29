@@ -12,7 +12,7 @@ class Ekskul_model
 
     public function addEkskul($data)
     {
-        $query = "INSERT INTO ekstrakurikuler (nama_ekskul, pembina, gambar, deskripsi) VALUES (:nama_ekskul, :pembina, :gambar, :deskripsi)";
+        $query = "INSERT INTO ekstrakurikuler (nama_ekskul, pembina, img, deskripsi) VALUES (:nama_ekskul, :pembina, :img, :deskripsi)";
         $image = $this->uploadImage();
         if (!$image) {
             return false;
@@ -21,7 +21,7 @@ class Ekskul_model
         $this->db->query($query);
         $this->db->bind('nama_ekskul', $data['nama_ekskul']);
         $this->db->bind('pembina', $data['pembina']);
-        $this->db->bind('gambar', $image);
+        $this->db->bind('img', $image);
         $this->db->bind('deskripsi', $data['deskripsi']);
 
         $this->db->execute();
@@ -31,11 +31,11 @@ class Ekskul_model
     public function uploadImage()
     {
         $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/rpl-web/public/img/ekskul/';
-        $target_file = $target_dir . basename($_FILES["gambar"]["name"]);
+        $target_file = $target_dir . basename($_FILES["img"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-        $check = getimagesize($_FILES["gambar"]["tmp_name"]);
+        $check = getimagesize($_FILES["img"]["tmp_name"]);
 
         if ($check !== false) {
             $uploadOk = 1;
@@ -52,7 +52,7 @@ class Ekskul_model
         //     return false;
         // }
 
-        if ($_FILES["gambar"]["size"] > 50000000) {
+        if ($_FILES["img"]["size"] > 50000000) {
             $uploadOk = 0;
             $this->error = "sorry, your file is too large!";
             return false;
@@ -64,8 +64,8 @@ class Ekskul_model
             return false;
         }
 
-        if (move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file)) {
-            return basename($_FILES["gambar"]["name"]);
+        if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+            return basename($_FILES["img"]["name"]);
         } else {
             $this->error = "there was an error while uploading!";
             return false;
@@ -91,16 +91,16 @@ class Ekskul_model
 
     public function delete($id)
     {
-        $query = "SELECT gambar FROM ekstrakurikuler WHERE id = :id";
+        $query = "SELECT img FROM ekstrakurikuler WHERE id = :id";
         $this->db->query($query);
         $this->db->bind('id', $id);
         $this->db->execute();
-        $gambar = $this->db->single()['gambar'];
+        $img = $this->db->single()['img'];
 
         $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/rpl-web/public/img/ekskul/';
-        $target_file = $target_dir . $gambar;
+        $target_file = $target_dir . $img;
 
-        // Hapus file gambar jika ada
+        // Hapus file img jika ada
         if (file_exists($target_file)) {
             unlink($target_file);
         }
@@ -115,7 +115,7 @@ class Ekskul_model
     public function edit($data)
     {
         $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/rpl-web/public/img/ekskul/';
-        $target_file = $target_dir . basename($_FILES["gambar"]["name"]);
+        $target_file = $target_dir . basename($_FILES["img"]["name"]);
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
         // Cek apakah format file sesuai
@@ -123,40 +123,42 @@ class Ekskul_model
             return false;
         }
 
-        // Ambil nama file gambar lama berdasarkan id
-        $query = "SELECT gambar FROM ekstrakurikuler WHERE id = :id";
+        // Ambil nama file img lama berdasarkan id
+        $query = "SELECT img FROM ekstrakurikuler WHERE id = :id";
         $this->db->query($query);
         $this->db->bind('id', $data['id']);
         $this->db->execute();
-        $gambar_lama = $this->db->single()['gambar'];
+        $img_lama = $this->db->single()['img'];
 
-        // Hapus file gambar lama jika ada
-        $old_file = $target_dir . $gambar_lama;
+        // Hapus file img lama jika ada
+        $old_file = $target_dir . $img_lama;
         if (file_exists($old_file)) {
             unlink($old_file);
         }
 
-        // Pindahkan file gambar baru ke direktori
+        // Pindahkan file img baru ke direktori
         if (!is_dir($target_dir) || !is_writable($target_dir)) {
             die("Upload directory is not writable or does not exist: " . $target_dir);
         }
-        move_uploaded_file($_FILES["gambar"]["tmp_name"], $target_file);
+        move_uploaded_file($_FILES["img"]["tmp_name"], $target_file);
 
         $query = "UPDATE ekstrakurikuler SET 
         nama_ekskul = :nama_ekskul,
         pembina = :pembina,
-        gambar = :gambar,
+        img = :img,
         deskripsi = :deskripsi
         WHERE id = :id
         ";
         $this->db->query($query);
         $this->db->bind('nama_ekskul', $data['nama_ekskul']);
         $this->db->bind('pembina', $data['pembina']);
-        $this->db->bind('gambar', $_FILES["gambar"]["name"]);
+        $this->db->bind('img', $_FILES["img"]["name"]);
         $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->bind('id', $data['id']);
         $this->db->execute();
 
         return $this->db->rowCount();
     }
+
+    
 }
