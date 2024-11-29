@@ -18,7 +18,7 @@ class Login extends Controller {
             $this->view('login/index', $data);
             $this->view('template/footer');
         } else {
-            header('Location: ' . BASEURL . '/admin');
+            header('Location: ' . BASEURL . '/manage_ekskul_admin');
         }
     }
 }

@@ -4,7 +4,7 @@
             Tambah Data Guru
         </h1>
         <div class="bg-white rounded-lg shadow-md p-6">
-            <form method="POST" action="<?= BASEURL ?>/manage_ekskul_admin/editById" enctype="multipart/form-data">
+            <form method="POST" action="<?= BASEURL ?>/manage_guru_admin/uploadGuru" enctype="multipart/form-data">
                 <input type="hidden" name="id">
                 <div class="mb-4">
                     <label
@@ -14,9 +14,9 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="nama_ekskul" name="nama_ekskul"
+                        id="nama_ekskul" name="nama"
                         type="text"
-                        placeholder="Masukkan nama ekskul" />
+                        placeholder="Masukkan nama guru" />
                 </div>
                 <div class="mb-4">
                     <label
@@ -26,9 +26,9 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="pembina" name="pembina"
+                        id="pembina" name="jabatan"
                         type="text" 
-                        placeholder="Masukkan nama pembina ekskul" />
+                        placeholder="Masukkan jabatan" />
                 </div>
                 <div class="mb-4">
                     <label
@@ -39,7 +39,7 @@
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="gambar"
-                        type="file" name="gambar"
+                        type="file" name="img"
                         accept="image/*" required />
                 </div>
                 <div class="flex items-center justify-between">

@@ -40,7 +40,12 @@
           >
            <?= $row['jabatan'] ?>
           </p>
+          <div class="flex justify-between p-4 border-t">
+                <a href="<?= BASEURL; ?>/manage_guru_admin/editGuru/<?= $row['id'] ?>" class="text-blue-600 hover:underline">Edit</a>
+                <a href="<?= BASEURL; ?>/manage_guru_admin/deleteGuru/<?= $row['id'] ?>" class="text-red-600 hover:underline" onclick="return confirm('apakah anda yakin ingin menghapus ekskul ini?')">Delete</a>
+          </div>
         </div>       
+        
         <?php endforeach; ?>
       </div>
       <div class="mt-8 flex justify-between items-center">
