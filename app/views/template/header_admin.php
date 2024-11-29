@@ -26,6 +26,7 @@
       </div>
       <nav class="flex space-x-4">
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/home_admin"> Home </a>
+        <a class="hover:text-gray-300" href="<?= BASEURL ?>/manage_guru_admin"> Manage Guru </a>
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/manage_ekskul_admin"> Manage Ekskul </a>
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/admin"> Admin </a>
       </nav>
