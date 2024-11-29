@@ -6,7 +6,6 @@ class Login extends Controller {
 
         $this->view('template/header');
         $this->view('login/index');
-        $this->view('template/footer');
     }
 
     public function checkUsername () {

@@ -13,3 +13,4 @@ VALUES
 );
 ALTER TABLE `sdn`.`ekstrakurikuler` 
 ADD COLUMN `pembina` VARCHAR(100) NOT NULL AFTER `deskripsi`;
+s

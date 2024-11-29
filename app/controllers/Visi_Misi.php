@@ -1,11 +1,11 @@
 <?php
 
-class About extends Controller
+class Visi_Misi extends Controller
 {
 
     public function index()
     {
         $this->view('template/header');
-        $this->view('about/page');
+        $this->view('visi_misi/page');
     }
 }
