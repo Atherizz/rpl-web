@@ -11,7 +11,7 @@ class Home extends Controller
         $offset = ($currentPage - 1) * $newsPerPage;
 
         $data['judul'] = 'Home';
-        $data['news'] = $this->model('Home_model')->getAllNews($newsPerPage, $offset);
+        $data['news'] = $this->model('Home_model')->getNewsPagination($newsPerPage, $offset);
         $data['carousel'] = $this->model('Home_model')->getAllCarousel();
 
         $totalNews = $this->model('Home_model')->countNews();

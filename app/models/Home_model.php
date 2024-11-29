@@ -7,11 +7,16 @@ class Home_model
     {
         $this->db = new Database();
     }
-    public function getAllNews($limit, $offset)
+    public function getNewsPagination($limit, $offset)
     {
         $this->db->query("SELECT * FROM article ORDER BY date DESC LIMIT :limit OFFSET :offset");
         $this->db->bind('limit', $limit);
         $this->db->bind('offset', $offset);
+        return $this->db->resultSet();
+    }
+    public function getAllNews()
+    {
+        $this->db->query("SELECT * FROM article");
         return $this->db->resultSet();
     }
 
