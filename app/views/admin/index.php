@@ -61,6 +61,10 @@
                         <input type="text" id="judul" name="nama_ekskul" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800">
                     </div>
                     <div class="mb-4">
+                        <label for="pembina" class="block text-gray-700 font-bold mb-2">Nama Pembina Ekskul:</label>
+                        <input type="text" id="pembina" name="pembina" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800">
+                    </div>
+                    <div class="mb-4">
                         <label for="konten" class="block text-gray-700 font-bold mb-2">Deskripsi:</label>
                         <textarea id="konten" name="deskripsi" rows="5" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800"></textarea>
                     </div>
