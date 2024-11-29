@@ -12,7 +12,7 @@ class Ekskul_model
 
     public function addEkskul($data)
     {
-        $query = "INSERT INTO ekstrakurikuler (nama_ekskul, gambar, deskripsi) VALUES (:nama_ekskul, :gambar, :deskripsi)";
+        $query = "INSERT INTO ekstrakurikuler (nama_ekskul, pembina, gambar, deskripsi) VALUES (:nama_ekskul, :pembina, :gambar, :deskripsi)";
         $image = $this->uploadImage();
         if (!$image) {
             return false;
@@ -20,6 +20,7 @@ class Ekskul_model
 
         $this->db->query($query);
         $this->db->bind('nama_ekskul', $data['nama_ekskul']);
+        $this->db->bind('pembina', $data['pembina']);
         $this->db->bind('gambar', $image);
         $this->db->bind('deskripsi', $data['deskripsi']);
 
@@ -143,12 +144,14 @@ class Ekskul_model
 
         $query = "UPDATE ekstrakurikuler SET 
         nama_ekskul = :nama_ekskul,
+        pembina = :pembina,
         gambar = :gambar,
         deskripsi = :deskripsi
         WHERE id = :id
         ";
         $this->db->query($query);
         $this->db->bind('nama_ekskul', $data['nama_ekskul']);
+        $this->db->bind('pembina', $data['pembina']);
         $this->db->bind('gambar', $_FILES["gambar"]["name"]);
         $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->bind('id', $data['id']);

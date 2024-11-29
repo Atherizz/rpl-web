@@ -25,6 +25,7 @@
                     <img
                         src="<?= BASEURL; ?>/img/ekskul/<?= $ekskul['gambar'] ?>"
                         alt="<?= $ekskul['nama_ekskul']; ?>" class="w-80 h-48 object-cover rounded-lg shadow-lg mb-4">
+                    <h4 class="text-lg text-gray-900">Pembina: <?= $ekskul['pembina']; ?></h4>
                     <p class="text-gray-600"><?= $ekskul['deskripsi']; ?></p>
                 </div>
             </div>

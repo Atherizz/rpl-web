@@ -23,6 +23,7 @@
 
             <!-- Description Section -->
             <div class="p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Pembina Ekskul: <?= $data['data']['pembina'] ?> </h2>
                 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Deskripsi</h2>
                 <p class="text-gray-600 leading-relaxed"><?= nl2br($data['data']['deskripsi']) ?></p>
             </div>

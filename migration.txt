@@ -11,3 +11,5 @@ VALUES
     'pramuka.png', 
     'Ekstrakurikuler Pramuka bertujuan untuk membentuk karakter disiplin, tanggung jawab, serta cinta tanah air. Melalui kegiatan ini, siswa dilatih untuk menjadi pemimpin yang tangguh dan mampu bekerja sama dalam tim.'
 );
+ALTER TABLE `sdn`.`ekstrakurikuler` 
+ADD COLUMN `pembina` VARCHAR(100) NOT NULL AFTER `deskripsi`;
