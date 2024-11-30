@@ -4,9 +4,14 @@ class manage_ekskul_admin extends Controller
 
     public function index()
     {
+        if(isset($_SESSION['success'])) {
+            $data['info'] = $_SESSION['success'];
+            unset($_SESSION['success']);
+        }
         $data['data'] = $this->model('Ekskul_model')->getAllEkskul();
         $this->view('template/header_admin');
         $this->view('manage_ekskul_admin/index', $data);
+         
     }
 
     public function tambah() {
@@ -23,7 +28,9 @@ class manage_ekskul_admin extends Controller
             $this->view('template/header_admin');
             $this->view('manage_ekskul_admin/tambah', ['error' => $error]);
         } else {
+            $_SESSION['success'] = 'Berhasil Menambahkan Data!';
             header('Location: ' . BASEURL . '/manage_ekskul_admin/index');
+            exit;
         }
     }
     public function detailEkskul($id)
@@ -45,7 +52,9 @@ class manage_ekskul_admin extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result =  $this->model('Ekskul_model')->edit($_POST);
             if ($result > 0) {
+                $_SESSION['success'] = 'Berhasil Mengedit Data!';
                 header('Location: ' . BASEURL . '/manage_ekskul_admin/index');
+                exit;
             } else {
                 $this->view('template/header_admin');
                 $this->view('manage_ekskul_admin/edit');
@@ -55,10 +64,9 @@ class manage_ekskul_admin extends Controller
     public function deleteEkskul($id)
     {
         if ($this->model('Ekskul_model')->delete($id) > 0) {
-            $data['info'] = "Berhasil Terhapus";
+            $_SESSION['success'] = 'Berhasil Menghapus Data!';
             header('Location:' . BASEURL . '/manage_ekskul_admin/index');
         } else {
-            $data['info'] = "Gagal Terhapus";
             header('Location:' . BASEURL . '/manage_ekskul_admin/index');
         }
     }

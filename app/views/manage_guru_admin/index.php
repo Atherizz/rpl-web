@@ -16,6 +16,9 @@
 
 <a href="<?= BASEURL ?>/manage_guru_admin/tambah" class="logout-button">Tambah Data</a>
 <main class="p-8">
+<?php if (isset($data['info'])) : ?>
+        <p class="text-green-600 hover:underline"><?= $data['info'] ?></p>
+    <?php endif; ?>
 <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
         DAFTAR GURU
     </h2>

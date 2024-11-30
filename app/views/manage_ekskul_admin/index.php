@@ -20,7 +20,7 @@
         EKSTRAKURIKULER SD NEGERI DINOYO 4
     </h2>
     <?php if (isset($data['info'])) : ?>
-        <p class="text-red-600 hover:underline"><?= $data['info'] ?></p>
+        <p class="text-green-600 hover:underline"><?= $data['info'] ?></p>
     <?php endif; ?>
     <div class="flex flex-wrap justify-center gap-8">
         <!-- News Item -->
