@@ -17,6 +17,11 @@ class Home_admin extends Controller
         $totalNews = $this->model('Home_model')->countNews();
         $data['totalPages'] = ceil($totalNews / $newsPerPage);
         $data['currentPage'] = $currentPage;
+        
+        if(isset($_SESSION['success'])) {
+            $data['info'] = $_SESSION['success'];
+            unset($_SESSION['success']);
+        }
 
         $this->view('template/header_admin', $data);
         $this->view('home_admin/index', $data);
@@ -38,7 +43,9 @@ class Home_admin extends Controller
             $this->view('template/header_admin');
             $this->view('home_admin/index', ['error' => $error]);
         } else {
+            $_SESSION['success'] = 'Berhasil Menambahkan Data!';
             header('Location: ' . BASEURL . '/home_admin/index');
+            exit;
         }
     }
 
@@ -58,10 +65,9 @@ class Home_admin extends Controller
     public function deleteNews($id)
     {
         if ($this->model('Home_Admin_model')->delete($id) > 0) {
-            $data['info'] = "Berhasil Terhapus";
+            $_SESSION['success'] = 'Berhasil Menghapus Data!';
             header('Location:' . BASEURL . '/home_admin/index');
         } else {
-            $data['info'] = "Gagal Terhapus";
             header('Location:' . BASEURL . '/home_admin/index');
         }
     }
@@ -78,7 +84,9 @@ class Home_admin extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result =  $this->model('Home_Admin_model')->edit($_POST);
             if ($result > 0) {
+                $_SESSION['success'] = 'Berhasil Mengedit Data!';
                 header('Location: ' . BASEURL . '/home_admin/index');
+                exit;
             } else {
                 $this->view('template/header_admin');
                 $this->view('home_admin/edit');

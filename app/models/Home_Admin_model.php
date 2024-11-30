@@ -41,8 +41,7 @@ class Home_Admin_model {
         $this->db->execute();
         return $this->db->rowCount();
     }
-
-
+    
     public function getNewsById($id) {
         $this->db->query( "SELECT * FROM article WHERE id = :id");
         $this->db->bind('id',$id);
