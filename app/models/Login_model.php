@@ -1,17 +1,21 @@
-<?php 
-class Login_model {
+<?php
+class Login_model
+{
     private $db;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->db = new Database();
     }
 
-    public function getUsers () {
+    public function getUsers()
+    {
         $this->db->query("SELECT * FROM user");
         $this->db->resultSet();
     }
-    
-    public function getUserByForm ($user) {
+
+    public function getUserByForm($user)
+    {
         $username = $user['username'];
         $password = $user['password'];
 
@@ -19,16 +23,14 @@ class Login_model {
         $this->db->query($queryFindUser);
         $this->db->bind('username', $username);
         $ambilUser = $this->db->single();
+        $hashPass = MD5($password);
 
         if ($ambilUser) {
-            if ($password == $ambilUser['password']) {
+            if ($hashPass == $ambilUser['password']) {
                 return true;
             } else {
                 return "username / password salah!";
-
             }
         }
-
     }
 }
-?>
