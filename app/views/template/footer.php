@@ -1,14 +1,14 @@
-<footer class="bg-gray-800 text-white py-8">
+<footer class="bg-[#455465] text-white py-8">
       <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center md:text-left">
           <img
             alt="School Logo"
             class="mx-auto md:mx-0 mb-4"
-            height="100"
+            height="150"
             src="<?=BASEURL ?>/img/asset/logo-sd.png"
-            width="100"
+            width="150"
           />
-          <h3 class="text-xl font-bold">SD NEGERI DINOYO 4</h3>
+          <h3 class="text-2xl font-bold">SD NEGERI DINOYO 4</h3>
           <p class="mt-2">
             Jl. Raya Dinoyo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65144
           </p>

@@ -1,16 +1,10 @@
 
-    <main class="p-8">
-      <h2 class="text-3xl font-bold mb-4">GURU &amp; KARYAWAN</h2>
-      <div class="mb-8">
-        <div class="relative">
-          <input
-            class="w-full p-4 border rounded-lg shadow-sm"
-            placeholder="Cari Guru / Karyawan"
-            type="text"
-          />
-          <i class="fas fa-search absolute right-4 top-4 text-gray-400"> </i>
+<section class="bg-[#D5D3D3] py-2">
+        <div class="container mx-auto ">
+            <h2 class="text-2xl font-bold text-gray-700 ml-12">GURU & KARYAWAN</h2>
         </div>
-      </div>
+    </section>
+    <main class="p-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Card 1 -->
         <div class="bg-white p-6 rounded-lg shadow-lg">
@@ -38,15 +32,6 @@
             2441694422611
           </p>
         </div>       
-      </div>
-      <div class="mt-8 flex justify-between items-center">
-        <p>Showing 1 to 8 of 50 items</p>
-        <div class="flex space-x-2">
-          <button class="px-3 py-1 border rounded">1</button>
-          <button class="px-3 py-1 border rounded">2</button>
-          <button class="px-3 py-1 border rounded">3</button>
-          <button class="px-3 py-1 border rounded">Last</button>
-        </div>
       </div>
     </main>
 

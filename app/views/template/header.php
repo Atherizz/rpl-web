@@ -33,18 +33,17 @@
  </head>
  <body class="font-roboto">
   <!-- Header -->
-  <header class="bg-green-800 text-white">
+  <header class="bg-[#3C583D] text-white">
    <div class="container mx-auto flex justify-between items-center py-4">
     <div class="flex items-center">
      <img alt="School Logo" class="h-10 w-10 mr-2" height="50"  src="<?=BASEURL ?>/img/asset/logo-sd.png" width="50"/>
+     <a class="text-xl font-bold" href="<?=BASEURL?>/home">
      <h1 class="text-xl font-bold">
       SDN DINOYO 4
      </h1>
+     </a>
     </div>
     <nav class="flex space-x-4">
-     <a class="hover:text-gray-300" href="<?=BASEURL?>/home">
-      Home
-     </a>
      <div class="relative dropdown">
       <a class="hover:text-gray-300 cursor-pointer">
        Tentang Kami
@@ -61,11 +60,20 @@
        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
         Sejarah
        </a>
+       <a class="block px-4 py-2 hover:bg-gray-200" href="#">
+        Kepala Sekolah
+       </a>
+       <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL?>/guru">
+        Guru
+       </a>
+       <a class="block px-4 py-2 hover:bg-gray-200" href="#">
+        Sarana Prasarana
+       </a>
       </div>
      </div>
      <div class="relative dropdown">
       <a class="hover:text-gray-300 cursor-pointer">
-       Akademik
+       Kesiswaan
        <i class="fas fa-caret-down">
        </i>
       </a>
@@ -76,13 +84,16 @@
        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
         Kegiatan
        </a>
+       <a class="block px-4 py-2 hover:bg-gray-200" href="">
+        Ekstrakulikuler
+       </a>
       </div>
      </div>
-     <a class="hover:text-gray-300" href="#">
-      Kesiswaan
-     </a>
      <a class="hover:text-gray-300" href="<?=BASEURL?>/kontak">
       Kontak
+     </a>
+     <a class="hover:text-gray-300" href="<?=BASEURL?>/berita">
+      berita
      </a>
      <a class="hover:text-gray-300" href="<?=BASEURL?>/login">
       Login
