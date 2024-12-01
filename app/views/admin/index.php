@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <style>
         .logout-button {
             position: absolute;
@@ -20,11 +14,9 @@
 
         }
     </style>
-</head>
 
 <body>
-    <main class="container mx-auto py-12 px-6">
-        <a href="<?= BASEURL ?>/home" class="logout-button" onclick="return confirm('apakah anda yakin ingin logout?')">Logout</a>
+    <main class="container mx-auto py-12 px-6">        
         <h2 class="text-2xl font-bold text-green-800 mb-6">Admin Menu</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Upload Berita Section -->

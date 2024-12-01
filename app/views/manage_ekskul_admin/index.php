@@ -1,9 +1,26 @@
+<style>
+        .logout-button {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-weight: bold;
+
+        }
+    </style>
+
 <section class="container mx-auto py-8">
+<a href="<?= BASEURL ?>/manage_ekskul_admin/tambah" class="logout-button">Tambah Data</a>
     <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
         EKSTRAKURIKULER SD NEGERI DINOYO 4
     </h2>
     <?php if (isset($data['info'])) : ?>
-        <p class="text-red-600 hover:underline"><?= $data['info'] ?></p>
+        <p class="text-green-600 hover:underline"><?= $data['info'] ?></p>
     <?php endif; ?>
     <div class="flex flex-wrap justify-center gap-8">
         <!-- News Item -->
@@ -12,7 +29,7 @@
                 <img
                     alt="School Event"
                     class="h-80 object-cover"
-                    src="<?= BASEURL; ?>/img/ekskul/<?= $row['gambar'] ?>"
+                    src="<?= BASEURL; ?>/img/ekskul/<?= $row['img'] ?>"
                     width="400" />
                 <div class="p-4 flex-1">
                     <h3 class="text-xl font-bold text-green-800"><?= $row['nama_ekskul'] ?></h3>

@@ -43,6 +43,35 @@
                 </div>
             <?php endforeach ?>
         </div>
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8">
+            <nav class="inline-flex -space-x-px">
+                <!-- Tombol Previous -->
+                <?php if ($data['currentPage'] > 1): ?>
+                    <a href="<?= BASEURL ?>?page=<?= $data['currentPage'] - 1 ?>"
+                        class="px-3 py-2 border border-gray-300 text-gray-500 hover:text-green-800">
+                        Previous
+                    </a>
+                <?php endif; ?>
+
+                <!-- Tombol Angka Halaman -->
+                <?php for ($i = 1; $i <= $data['totalPages']; $i++) : ?>
+                    <a href="<?= BASEURL ?>?page=<?= $i ?>"
+                        class="px-3 py-2 border border-gray-300 <?= $i == $data['currentPage'] ? 'bg-green-800 text-white' : 'text-gray-500 hover:text-green-800' ?>">
+                        <?= $i ?>
+                    </a>
+                <?php endfor; ?>
+
+                <!-- Tombol Next -->
+                <?php if ($data['currentPage'] < $data['totalPages']): ?>
+                    <a href="<?= BASEURL ?>?page=<?= $data['currentPage'] + 1 ?>"
+                        class="px-3 py-2 border border-gray-300 text-gray-500 hover:text-green-800">
+                        Next
+                    </a>
+                <?php endif; ?>
+            </nav>
+        </div>
+
     </section>
     <!-- Statistics Section -->
     <section class="bg-[#81A37D] py-2">
@@ -53,18 +82,18 @@
     <section class="bg-[#A5CAA0] text-white py-8">
         <div class="container mx-auto text-center">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class = "animate-count">
+                <div class="animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
                     <!-- Kalau mau ubah tampilan jumlah di dalam data target -->
-                    <p class="text-5xl font-bold mb-2" data-target="355">0</p> 
+                    <p class="text-5xl font-bold" data-target="355">0</p> 
                     <p>Jumlah Peserta Didik</p>
                 </div>
-                <div class = "animate-count">
+                <div class="animate-count">
                     <i class="fas fa-chalkboard-teacher text-4xl mb-2"> </i>
                     <p class="text-5xl font-bold mb-2" data-target="24">0</p>
                     <p>Jumlah Guru</p>
                 </div>
-                <div class = "animate-count">
+                <div class="animate-count">
                     <i class="fas fa-users text-4xl mb-2"> </i>
                     <p class="text-5xl font-bold mb-2" data-target="12">0</p>
                     <p>Jumlah Karyawan</p>
@@ -77,22 +106,22 @@
     // Count Animation
     const countElements = document.querySelectorAll('.animate-count');
 
-countElements.forEach(element => {
-    const targetNumber = parseInt(element.querySelector('p[data-target]').getAttribute('data-target'));
-    const countElement = element.querySelector('p');
+    countElements.forEach(element => {
+        const targetNumber = parseInt(element.querySelector('p[data-target]').getAttribute('data-target'));
+        const countElement = element.querySelector('p');
 
-    let start = 0;
-    const increment = targetNumber / 75;
-    const interval = setInterval(() => {
-        start += increment;
-        countElement.textContent = Math.round(start);
+        let start = 0;
+        const increment = targetNumber / 75;
+        const interval = setInterval(() => {
+            start += increment;
+            countElement.textContent = Math.round(start);
 
-        if (start >= targetNumber) {
-            clearInterval(interval);
-            countElement.textContent = targetNumber;
-        }
-    }, 10); // Speed animation
-});
+            if (start >= targetNumber) {
+                clearInterval(interval);
+                countElement.textContent = targetNumber;
+            }
+        }, 10); // Speed animation
+    });
     // carousel
     const carousel = document.querySelector('.carousel');
     const items = document.querySelectorAll('.carousel-item');
@@ -130,14 +159,14 @@ countElements.forEach(element => {
     padding: 1rem;
     }
     .carousel-item {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
-.carousel-item.active {
-    opacity: 1;
-}
+    .carousel-item.active {
+        opacity: 1;
+    }
 </style>

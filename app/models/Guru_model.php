@@ -1,62 +1,49 @@
 <?php 
 
-class Home_Admin_model {
+class Guru_model {
     private $db;
     public $error;
-
     public function __construct() {
         $this->db = new Database();
     }
+    public function getAllTeacher() {
+        $this->db->query("SELECT * FROM guru");
+        return $this->db->resultSet();
+    }
 
-    public function addNews($data)
+    public function getGuruById($id) {
+        $this->db->query( "SELECT * FROM guru WHERE id = :id");
+        $this->db->bind('id',$id);
+        return $this->db->single();
+
+    }
+
+    public function addGuru($data)
     {
-        $query = "INSERT INTO article (`date`,title, img, word) VALUES (:date, :title, :img, :word)";
-        $path = "news";
+        $query = "INSERT INTO guru (nama, jabatan, img) VALUES (:nama, :jabatan, :img)";
+        $path = "guru";
         $image = $this->uploadImage($path);
         if (!$image) {
             return false;
         }
 
         $this->db->query($query);
-        $this->db->bind('date', $data['date']);
-        $this->db->bind('title', $data['title']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('jabatan', $data['jabatan']);
         $this->db->bind('img', $image);
-        $this->db->bind('word', $data['word']);
 
         $this->db->execute();
         return $this->db->rowCount();
-    }
-
-    public function addCarousel($data)
-    {
-        $query = "INSERT INTO carousel (img) VALUES (:img)";
-        $path = "carousel";
-        $img = $this->uploadImage($path);
-
-        if (!$img) {
-            return false;
-        }
-        $this->db->query($query);
-        $this->db->bind('img', $img);
-        $this->db->execute();
-        return $this->db->rowCount();
-    }
-    
-    public function getNewsById($id) {
-        $this->db->query( "SELECT * FROM article WHERE id = :id");
-        $this->db->bind('id',$id);
-        return $this->db->single();
-
     }
 
     public function delete($id) {
-        $query = "SELECT img FROM article WHERE id = :id";
+        $query = "SELECT img FROM guru WHERE id = :id";
         $this->db->query($query);
         $this->db->bind('id', $id);
         $this->db->execute();
         $gambar = $this->db->single()['img'];
 
-        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/rpl-web/public/img/news/';
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] . '/rpl-web/public/img/guru/';
         $target_file = $target_dir . $gambar;
 
         // Hapus file gambar jika ada
@@ -64,7 +51,7 @@ class Home_Admin_model {
             unlink($target_file);
         }
 
-        $query = "DELETE FROM article WHERE id = :id";
+        $query = "DELETE FROM guru WHERE id = :id";
         $this->db->query($query);
         $this->db->bind('id', $id);
         $this->db->execute();
@@ -73,7 +60,7 @@ class Home_Admin_model {
     }
 
     public function edit($data) {
-        $target_dir = $_SERVER['DOCUMENT_ROOT'] .'/rpl-web/public/img/news/';
+        $target_dir = $_SERVER['DOCUMENT_ROOT'] .'/rpl-web/public/img/guru/';
         $target_file = $target_dir . basename($_FILES["img"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -89,18 +76,16 @@ class Home_Admin_model {
 
     
 
-        $query = "UPDATE article SET 
-        `date` = :date,
-        title = :title,
-        img = :img,
-        word = :word
+        $query = "UPDATE guru SET 
+        nama = :nama,
+        jabatan = :jabatan,
+        img = :img
         WHERE id = :id
         ";
         $this->db->query($query);
-        $this->db->bind('date', $data['date']);
-        $this->db->bind('title', $data['title']);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('jabatan', $data['jabatan']);
         $this->db->bind('img', $_FILES["img"]["name"]);
-        $this->db->bind('word', $data['word']);
         $this->db->bind('id', $data['id']);
         $this->db->execute();
 
@@ -149,6 +134,3 @@ class Home_Admin_model {
         }
     }
 }
-
-
-?>
