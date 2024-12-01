@@ -13,7 +13,7 @@
 
 <body class="font-roboto">
   <!-- Header -->
-  <header class="bg-green-800 text-white">
+  <header class="bg-[#3C583D] text-white">
     <div class="container mx-auto flex justify-between items-center py-4">
       <div class="flex items-center">
         <img

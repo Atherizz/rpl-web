@@ -18,7 +18,7 @@
         </div>
     </section>
     <section class="container mx-auto py-8">
-        <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
+        <h2 class="text-center text-2xl font-bold text-[#3C583D] mb-8">
             INFORMASI SD NEGERI DINOYO 4
         </h2>
         <div class="flex flex-wrap justify-center gap-8">
@@ -74,24 +74,28 @@
 
     </section>
     <!-- Statistics Section -->
-    <section class="bg-green-800 text-white py-8">
+    <section class="bg-[#81A37D] py-2">
         <div class="container mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-8">SD NEGERI DINOYO 4</h2>
+            <h2 class="text-2xl font-bold  text-[#EBE2B0]">SD NEGERI DINOYO 4</h2>
+        </div>
+    </section>
+    <section class="bg-[#A5CAA0] text-white py-8">
+        <div class="container mx-auto text-center">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
                     <!-- Kalau mau ubah tampilan jumlah di dalam data target -->
-                    <p class="text-4xl font-bold" data-target="355">0</p>
+                    <p class="text-5xl font-bold" data-target="355">0</p> 
                     <p>Jumlah Peserta Didik</p>
                 </div>
                 <div class="animate-count">
                     <i class="fas fa-chalkboard-teacher text-4xl mb-2"> </i>
-                    <p class="text-4xl font-bold" data-target="24">0</p>
+                    <p class="text-5xl font-bold mb-2" data-target="24">0</p>
                     <p>Jumlah Guru</p>
                 </div>
                 <div class="animate-count">
                     <i class="fas fa-users text-4xl mb-2"> </i>
-                    <p class="text-4xl font-bold" data-target="12">0</p>
+                    <p class="text-5xl font-bold mb-2" data-target="12">0</p>
                     <p>Jumlah Karyawan</p>
                 </div>
             </div>
@@ -146,6 +150,14 @@
     });
 </script>
 <style>
+    .animate-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1rem;
+    }
     .carousel-item {
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
