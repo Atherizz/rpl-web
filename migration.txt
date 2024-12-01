@@ -28,3 +28,6 @@ VALUES
     'Guru Kelas 5', 
     'farid.jpg'
 );
+
+ALTER TABLE `sdn`.`ekstrakurikuler` 
+CHANGE COLUMN `gambar` `img` VARCHAR(255) NOT NULL ;
