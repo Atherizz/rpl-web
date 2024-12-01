@@ -4,7 +4,7 @@ class Kontak extends Controller {
 
     public function index() {
         $this->view('template/header');
-         // $this->view('template/footer');
+        $this->view('kontak/index');
     }
 }
 
