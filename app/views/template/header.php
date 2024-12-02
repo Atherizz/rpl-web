@@ -86,7 +86,7 @@
        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
         Kegiatan
        </a>
-       <a class="block px-4 py-2 hover:bg-gray-200" href="">
+       <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL?>/ekskul">
         Ekstrakulikuler
        </a>
       </div>
