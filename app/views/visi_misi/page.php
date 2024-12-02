@@ -10,7 +10,7 @@
 <body class="bg-gray-100">
     <section class="bg-[#D5D3D3] py-2">
         <div class="container mx-auto ">
-            <h2 class="text-2xl font-bold text-gray-700 ml-12">VISI MISI & MOTTO</h2>
+            <h2 class="text-2xl font-bold text-gray-700 ml-12">MOTTO, VISI & MISI</h2>
         </div>
     </section>
     <div class="max-w-5xl mx-auto p-6 bg-white shadow-lg mt-10 rounded-lg">
