@@ -19,9 +19,10 @@ class Login_model {
         $this->db->query($queryFindUser);
         $this->db->bind('username', $username);
         $ambilUser = $this->db->single();
+        $hashPass = hash('sha256', $password);
 
         if ($ambilUser) {
-            if ($password == $ambilUser['password']) {
+            if ($hashPass == $ambilUser['password']) {
                 return true;
             } else {
                 return "username / password salah!";
