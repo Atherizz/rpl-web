@@ -165,6 +165,8 @@
     border: 1px solid white;
     border-radius: 5px;
     padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     }
     .carousel-item {
         opacity: 0;
@@ -177,5 +179,19 @@
     .carousel-item.active {
         opacity: 1;
     }
-    
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+    theme: {
+        screens: {
+        'tablet': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+        },
+    }
+    }
 </style>
