@@ -31,3 +31,5 @@ VALUES
 
 ALTER TABLE `sdn`.`ekstrakurikuler` 
 CHANGE COLUMN `gambar` `img` VARCHAR(255) NOT NULL ;
+
+UPDATE sdn.user SET `password` = SHA2(password, 256); 
