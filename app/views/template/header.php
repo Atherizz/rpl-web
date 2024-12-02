@@ -95,7 +95,7 @@
       Kontak
      </a>
      <a class="hover:text-gray-300" href="<?=BASEURL?>/berita">
-      berita
+      Berita
      </a>
      <a class="hover:text-gray-300" href="<?=BASEURL?>/login">
       Login

@@ -80,7 +80,7 @@
         </div>
     </section>
     <section class="bg-[#A5CAA0] text-white py-8">
-        <div class="container mx-auto text-center">
+        <div class="counter-container mx-auto text-center">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
@@ -148,6 +148,14 @@
             item.classList.add('active');
         }
     });
+    // Auto slide carousel
+    const autoSlideInterval = 2000; // Set the interval time in milliseconds
+
+    setInterval(() => {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalItems;
+        items[currentIndex].classList.add('active');
+    }, autoSlideInterval);
 </script>
 <style>
     .animate-count {
@@ -169,4 +177,5 @@
     .carousel-item.active {
         opacity: 1;
     }
+    
 </style>
