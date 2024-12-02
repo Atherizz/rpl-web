@@ -1,4 +1,3 @@
-
 <style>
     .logout-button {
         position: absolute;
@@ -11,10 +10,8 @@
         border-radius: 2px;
         cursor: pointer;
         font-weight: bold;
-
     }
 </style>
-
 
 <a href="<?= BASEURL ?>/home_admin/tambah" class="logout-button">Tambah Data</a>
 <section class="container mx-auto py-8">
