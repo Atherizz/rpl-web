@@ -23,12 +23,13 @@ class Login_model {
 
         if ($ambilUser) {
             if ($hashPass == $ambilUser['password']) {
-                return true;
+                return $ambilUser;
             } else {
-                return "username / password salah!";
+                return false;
 
             }
         }
+        return false;
 
     }
 }
