@@ -1,5 +1,9 @@
 <?php 
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 class Login extends Controller {
 
     public function index() {
@@ -18,8 +22,10 @@ class Login extends Controller {
             $this->view('login/index', $data);
             $this->view('template/footer');
         } else {
+            $_SESSION['login'] = true;
             header('Location: ' . BASEURL . '/home_admin');
+            exit;
         }
-    }
+    } 
 }
 }

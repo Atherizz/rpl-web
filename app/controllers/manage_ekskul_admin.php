@@ -1,9 +1,23 @@
 <?php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 class manage_ekskul_admin extends Controller
 {
 
+    public function __construct(){
+        if(!isset($_SESSION['login'])) {
+            header('Location: ' . BASEURL . '/login/index');
+            exit;
+        }
+
+
+    }
+
     public function index()
-    {
+    {   
+
         if(isset($_SESSION['success'])) {
             $data['info'] = $_SESSION['success'];
             unset($_SESSION['success']);

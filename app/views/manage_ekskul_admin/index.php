@@ -1,3 +1,14 @@
+<?php 
+if(!isset($_SESSION['login'])) {
+    header('Location: ' . BASEURL . '/login/index');
+    exit;
+}
+
+?>
+
+
+
+
 <style>
         .logout-button {
             position: absolute;

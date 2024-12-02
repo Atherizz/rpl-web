@@ -2,6 +2,10 @@
 
 class Home extends Controller
 {
+
+    public function __construct() {
+
+    }
     public function index()
     {
         $newsPerPage = 6; // Jumlah berita per halaman

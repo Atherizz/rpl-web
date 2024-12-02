@@ -28,7 +28,7 @@
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/home_admin"> Manage Home </a>
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/manage_guru_admin"> Manage Guru </a>
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/manage_ekskul_admin"> Manage Ekskul </a>
-        <a class="hover:text-red-300" href="<?= BASEURL ?>/home" onclick="return confirm('apakah anda yakin ingin logout?')"> Logout </a>
+        <a class="hover:text-red-300" href="<?= BASEURL ?>/logout" onclick="return confirm('apakah anda yakin ingin logout?')"> Logout </a>
       </nav>
     </div>
   </header>
