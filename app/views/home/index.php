@@ -1,22 +1,24 @@
 <main class="bg-white">
     <!-- Hero Section -->
     <section class="relative h-screen md:h-[600px] overflow-hidden">
-        <div class="relative w-full h-full">
-            <div class="carousel">
-                <?php foreach ($data['carousel'] as $row) : ?>
-                    <div class="carousel-item">
-                        <img alt="School Banner 1" class="w-full h-full object-cover" src="<?= BASEURL ?>/img/carousel/<?= $row['img'] ?>" />
-                    </div>
-                <?php endforeach; ?>
+            <div class="relative w-full h-full">
+                <div class="carousel">
+                    <?php foreach ($data['carousel'] as $row) : ?>
+                        <div class="carousel-item">
+                            <img alt="School Banner 1" class="w-full h-full object-cover" src="<?= BASEURL ?>/img/carousel/<?= $row['img'] ?>" />
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="prev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="next">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="text-4xl font-bold">SD NEGERI DINOYO 4</h1>
+                    <p class="text-xl font-serif">"TATA TITI TITIS"</p>
+                </div>
+            </div>
+            <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 text text-white p-2">&#10094;</button>
+            <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-white p-2">&#10095;</button>
+        </section>
     <section class="container mx-auto py-8">
         <h2 class="text-center text-2xl font-bold text-[#3C583D] mb-8">
             INFORMASI SD NEGERI DINOYO 4
