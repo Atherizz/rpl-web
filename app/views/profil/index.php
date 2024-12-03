@@ -7,7 +7,7 @@
    <div class="flex flex-col lg:flex-row">
     <div>
         <div class="img">
-        <img alt="Gambar depan SDN Dinoyo 4" class="mb-4" height="500" src="<?= BASEURL ?>/img/news/SDN 4 DINOYO MALANG<?= $row['img'] ?>" width="500"/>
+        <img alt="Gambar depan SDN Dinoyo 4" class="mb-4" height="500" src="<?= BASEURL ?>/img/news/depan<?= $row['img'] ?>" width="500"/>
         </div>
      <p class="mb-4">
       SDN Dinoyo 4 adalah sebuah lembaga pendidikan dasar negeri yang berlokasi strategis di Jl. MT. Haryono XIII/50, Kecamatan Lowokwaru, Kota Malang, Provinsi Jawa Timur. Sekolah ini telah menjadi bagian penting dari dunia pendidikan di Indonesia sejak pertama kali didirikan pada tahun 1976. Dengan usia lebih dari empat dekade, SDN Dinoyo 4 terus berkomitmen untuk memberikan pendidikan berkualitas kepada generasi muda, khususnya di wilayah Kota Malang.
