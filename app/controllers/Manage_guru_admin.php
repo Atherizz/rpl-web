@@ -2,6 +2,14 @@
 
 class Manage_guru_admin extends Controller {
 
+    public function __construct(){
+        if(!isset($_SESSION['login'])) {
+            header('Location: ' . BASEURL . '/login/index');
+            exit;
+        }
+
+    }
+
     public function index()
     {
         if(isset($_SESSION['success'])) {
