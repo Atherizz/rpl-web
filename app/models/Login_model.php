@@ -1,9 +1,16 @@
 <?php 
 class Login_model {
     private $db;
+    public $error;
 
     public function __construct() {
         $this->db = new Database();
+    }
+
+    public function getUserByUsername($username) {
+        $this->db->query("SELECT * FROM user WHERE username = :username");
+        $this->db->bind('username', $username);
+        return $this->db->single();
     }
 
     public function getUsers () {
@@ -25,6 +32,7 @@ class Login_model {
             if ($hashPass == $ambilUser['password']) {
                 return $ambilUser;
             } else {
+                $this->error = "Username atau password salah.";
                 return false;
 
             }

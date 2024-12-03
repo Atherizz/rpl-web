@@ -46,6 +46,12 @@ class Home_admin extends Controller
         $this->view('home_admin/tambah');
     }
 
+    public function tambahCarousel()
+    {
+        $this->view('template/header_admin');
+        $this->view('home_admin/tambahCarousel');
+    }
+
     public function uploadNews()
     {
         $model = $this->model('Home_Admin_Model');
