@@ -53,7 +53,7 @@
        </i>
       </a>
       <div class="absolute hidden dropdown-menu bg-white text-black mt-2 rounded shadow-lg">
-       <a class="block px-4 py-2 hover:bg-gray-200" href="#">
+       <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL?>/profil">
         Profil
        </a>
        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL?>/visi_misi">
@@ -86,7 +86,7 @@
        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
         Kegiatan
        </a>
-       <a class="block px-4 py-2 hover:bg-gray-200" href="">
+       <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL?>/ekstrakulikuler">
         Ekstrakulikuler
        </a>
       </div>
