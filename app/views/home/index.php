@@ -85,7 +85,7 @@
                 <div class="animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
                     <!-- Kalau mau ubah tampilan jumlah di dalam data target -->
-                    <p class="text-5xl font-bold" data-target="355">0</p> 
+                    <p class="text-5xl font-bold mb-2" data-target="355">0</p> 
                     <p>Jumlah Peserta Didik</p>
                 </div>
                 <div class="animate-count">
