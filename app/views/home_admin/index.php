@@ -1,6 +1,5 @@
-
 <style>
-    .logout-button {
+    .berita {
         position: absolute;
         top: 100px;
         right: 20px;
@@ -11,13 +10,26 @@
         border-radius: 2px;
         cursor: pointer;
         font-weight: bold;
-
+    }
+    .carousel {
+        position: absolute;
+        top: 100px;
+        right: 180px;
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        font-weight: bold;
     }
 </style>
 
+<a href="<?= BASEURL ?>/home_admin/tambah" class="berita">Tambah Berita</a>
+<a href="<?= BASEURL ?>/home_admin/tambahCarousel" class="carousel">Tambah Carousel</a>
 
-<a href="<?= BASEURL ?>/home_admin/tambah" class="logout-button">Tambah Data</a>
 <section class="container mx-auto py-8">
+
 
     <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
         INFORMASI SD NEGERI DINOYO 4

@@ -1,24 +1,26 @@
 <main class="bg-white">
     <!-- Hero Section -->
     <section class="relative h-screen md:h-[600px] overflow-hidden">
-        <div class="relative w-full h-full">
-            <div class="carousel">
-                <?php foreach ($data['carousel'] as $row) : ?>
-                    <div class="carousel-item">
-                        <img alt="School Banner 1" class="w-full h-full object-cover" src="<?= BASEURL ?>/img/carousel/<?= $row['img'] ?>" />
-                    </div>
-                <?php endforeach; ?>
+            <div class="relative w-full h-full">
+                <div class="carousel">
+                    <?php foreach ($data['carousel'] as $row) : ?>
+                        <div class="carousel-item">
+                            <img alt="School Banner 1" class="w-full h-full object-cover" src="<?= BASEURL ?>/img/carousel/<?= $row['img'] ?>" />
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="prev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="next">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="text-4xl font-bold">SD NEGERI DINOYO 4</h1>
+                    <p class="text-xl font-serif">"TATA TITI TITIS"</p>
+                </div>
+            </div>
+            <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 text text-white p-2">&#10094;</button>
+            <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-white p-2">&#10095;</button>
+        </section>
     <section class="container mx-auto py-8">
-        <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
+        <h2 class="text-center text-2xl font-bold text-[#3C583D] mb-8">
             INFORMASI SD NEGERI DINOYO 4
         </h2>
         <div class="flex flex-wrap justify-center gap-8">
@@ -74,24 +76,28 @@
 
     </section>
     <!-- Statistics Section -->
-    <section class="bg-green-800 text-white py-8">
+    <section class="bg-[#81A37D] py-2">
         <div class="container mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-8">SD NEGERI DINOYO 4</h2>
+            <h2 class="text-2xl font-bold  text-[#EBE2B0]">SD NEGERI DINOYO 4</h2>
+        </div>
+    </section>
+    <section class="bg-[#A5CAA0] text-white py-8">
+        <div class="counter-container mx-auto text-center">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
                     <!-- Kalau mau ubah tampilan jumlah di dalam data target -->
-                    <p class="text-4xl font-bold" data-target="355">0</p>
+                    <p class="text-5xl font-bold mb-2" data-target="355">0</p> 
                     <p>Jumlah Peserta Didik</p>
                 </div>
                 <div class="animate-count">
                     <i class="fas fa-chalkboard-teacher text-4xl mb-2"> </i>
-                    <p class="text-4xl font-bold" data-target="24">0</p>
+                    <p class="text-5xl font-bold mb-2" data-target="24">0</p>
                     <p>Jumlah Guru</p>
                 </div>
                 <div class="animate-count">
                     <i class="fas fa-users text-4xl mb-2"> </i>
-                    <p class="text-4xl font-bold" data-target="12">0</p>
+                    <p class="text-5xl font-bold mb-2" data-target="12">0</p>
                     <p>Jumlah Karyawan</p>
                 </div>
             </div>
@@ -144,8 +150,26 @@
             item.classList.add('active');
         }
     });
+    // Auto slide carousel
+    const autoSlideInterval = 2000; // Set the interval time in milliseconds
+
+    setInterval(() => {
+        items[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalItems;
+        items[currentIndex].classList.add('active');
+    }, autoSlideInterval);
 </script>
 <style>
+    .animate-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
     .carousel-item {
         opacity: 0;
         transition: opacity 0.5s ease-in-out;
@@ -156,5 +180,20 @@
 
     .carousel-item.active {
         opacity: 1;
+    }
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+    theme: {
+        screens: {
+        'tablet': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'laptop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'desktop': '1280px',
+        // => @media (min-width: 1280px) { ... }
+        },
+    }
     }
 </style>

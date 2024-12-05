@@ -13,7 +13,7 @@
 
 <body class="font-roboto">
   <!-- Header -->
-  <header class="bg-green-800 text-white">
+  <header class="bg-[#3C583D] text-white">
     <div class="container mx-auto flex justify-between items-center py-4">
       <div class="flex items-center">
         <img
@@ -28,7 +28,7 @@
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/home_admin"> Manage Home </a>
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/manage_guru_admin"> Manage Guru </a>
         <a class="hover:text-gray-300" href="<?= BASEURL ?>/manage_ekskul_admin"> Manage Ekskul </a>
-        <a class="hover:text-red-300" href="<?= BASEURL ?>/home" onclick="return confirm('apakah anda yakin ingin logout?')"> Logout </a>
+        <a class="hover:text-red-300" href="<?= BASEURL ?>/logout" onclick="return confirm('apakah anda yakin ingin logout?')"> Logout </a>
       </nav>
     </div>
   </header>

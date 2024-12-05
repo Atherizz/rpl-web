@@ -1,11 +1,22 @@
 <?php
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 class Home_admin extends Controller
 {
+    public function __construct(){
+        if(!isset($_SESSION['login'])) {
+            header('Location: ' . BASEURL . '/login/index');
+            exit;
+        }
+
+    }
 
     public function index()
     {
         $newsPerPage = 6; // Jumlah berita per halaman
-
         $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
         $offset = ($currentPage - 1) * $newsPerPage;
@@ -17,11 +28,12 @@ class Home_admin extends Controller
         $totalNews = $this->model('Home_model')->countNews();
         $data['totalPages'] = ceil($totalNews / $newsPerPage);
         $data['currentPage'] = $currentPage;
-        
-        if(isset($_SESSION['success'])) {
-            $data['info'] = $_SESSION['success'];
-            unset($_SESSION['success']);
-        }
+
+
+        // if(isset($_SESSION['success'])) {
+        //     $data['info'] = $_SESSION['success'];
+        //     unset($_SESSION['success']);
+        // }
 
         $this->view('template/header_admin', $data);
         $this->view('home_admin/index', $data);
@@ -32,6 +44,12 @@ class Home_admin extends Controller
     {
         $this->view('template/header_admin');
         $this->view('home_admin/tambah');
+    }
+
+    public function tambahCarousel()
+    {
+        $this->view('template/header_admin');
+        $this->view('home_admin/tambahCarousel');
     }
 
     public function uploadNews()
