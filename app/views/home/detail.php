@@ -1,4 +1,4 @@
-<main class="container mx-auto mt-8 flex">
+<main class="container mx-auto mt-8 mb-8 flex">
   <section class="w-2/3 bg-white p-6 rounded-lg shadow-md">
     <a href="<?= BASEURL ?>/home/" class="text-green-800 hover:underline">Kembali</a>
     <h2 class="text-2xl font-bold mb-4">
@@ -17,7 +17,11 @@
   </section>
   <aside class="w-1/3 ml-8">
     <h3 class="text-xl font-bold mb-4">Terbaru</h3>
-    <?php foreach ($data['list'] as $row) : ?>
+    <?php
+    $count = 0; // Inisialisasi counter
+    foreach ($data['list'] as $row) :
+      if ($count >= 10) break; // Hentikan setelah 10 iterasi
+    ?>
       <div class="space-y-4">
         <div class="flex items-center">
           <img
@@ -33,7 +37,9 @@
             <a href="<?= BASEURL ?>/home/detail/<?= $row['id'] ?>" class="text-green-800 hover:underline">Read More</a>
           </div>
         </div>
-      <?php endforeach; ?>
-
+      <?php
+      $count++; // Increment counter
+    endforeach;
+      ?>
   </aside>
 </main>

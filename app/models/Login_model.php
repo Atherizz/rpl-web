@@ -1,24 +1,29 @@
-<?php 
-class Login_model {
+<?php
+class Login_model
+{
     private $db;
     public $error;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->db = new Database();
     }
 
-    public function getUserByUsername($username) {
+    public function getUserByUsername($username)
+    {
         $this->db->query("SELECT * FROM user WHERE username = :username");
         $this->db->bind('username', $username);
         return $this->db->single();
     }
 
-    public function getUsers () {
+    public function getUsers()
+    {
         $this->db->query("SELECT * FROM user");
         $this->db->resultSet();
     }
-    
-    public function getUserByForm ($user) {
+
+    public function getUserByForm($user)
+    {
         $username = $user['username'];
         $password = $user['password'];
 
@@ -34,11 +39,8 @@ class Login_model {
             } else {
                 $this->error = "Username atau password salah.";
                 return false;
-
             }
         }
         return false;
-
     }
 }
-?>
