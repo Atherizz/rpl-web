@@ -1,3 +1,53 @@
+<style>
+  /* Add mobile-specific styles here */
+  @media (max-width: 768px) {
+    /* Hero Section */
+    .hero-section {
+      height: 300px; /* adjust height for mobile */
+    }
+
+    /* News Item */
+    .news-item {
+      width: 100%; /* make news items full-width on mobile */
+      margin-bottom: 20px; /* add some spacing between news items */
+    }
+
+    /* Statistics Section */
+    .statistics-section {
+      padding: 20px; /* reduce padding on mobile */
+    }
+
+    /* Carousel */
+    .carousel {
+      height: 200px; /* adjust carousel height for mobile */
+    }
+
+    .carousel-item {
+      width: 100%; /* make carousel items full-width on mobile */
+    }
+
+    /* Counters */
+    .animate-count {
+      margin: 10px; /* reduce margin on mobile */
+    }
+
+    /* Other adjustments */
+    h2 {
+      font-size: 18px; /* reduce font size for mobile */
+    }
+
+    p {
+      font-size: 14px; /* reduce font size for mobile */
+    }
+  }
+
+  /* Add tablet-specific styles here (optional) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Add styles for tablet screens here */
+  }
+</style>
+
+
 <main class="bg-white">
     <!-- Hero Section -->
     <section class="relative h-screen md:h-[600px] overflow-hidden">
@@ -156,42 +206,4 @@
         currentIndex = (currentIndex + 1) % totalItems;
         items[currentIndex].classList.add('active');
     }, autoSlideInterval);
-</script>
-<style>
-    .animate-count {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    }
-    .carousel-item {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .carousel-item.active {
-        opacity: 1;
-    }
-    /** @type {import('tailwindcss').Config} */
-    module.exports = {
-    theme: {
-        screens: {
-        'tablet': '640px',
-        // => @media (min-width: 640px) { ... }
-
-        'laptop': '1024px',
-        // => @media (min-width: 1024px) { ... }
-
-        'desktop': '1280px',
-        // => @media (min-width: 1280px) { ... }
-        },
-    }
-    }
-</style>
+</script>   
