@@ -10,7 +10,7 @@
       <div class="bg-white p-6 rounded-lg shadow-lg">
         <img
           alt="Profile picture of CIKGU BESAR S.Pd, M.Pd"
-          class="w-24 h-24 mx-auto rounded-full mb-4"
+          class="w-24 h-24 object-cover object-position-top mx-auto rounded-full mb-4"
           height="100"
           src="<?= BASEURL ?>/img/guru/<?= $row['img'] ?>"
           width="100" />
