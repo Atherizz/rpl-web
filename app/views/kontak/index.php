@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <main class="p-4">
    <h1 class="text-center text-2xl font-bold mb-4">
     KONTAK

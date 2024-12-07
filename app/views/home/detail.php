@@ -1,4 +1,5 @@
-<main class="container mx-auto mt-8 mb-8 flex">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<main class="container mx-auto mt-8 flex">
   <section class="w-2/3 bg-white p-6 rounded-lg shadow-md">
     <a href="<?= BASEURL ?>/home/" class="text-green-800 hover:underline">Kembali</a>
     <h2 class="text-2xl font-bold mb-4">
