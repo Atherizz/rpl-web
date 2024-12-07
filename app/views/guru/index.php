@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <main class="p-8">
   <h2 class="text-3xl font-bold mb-4">GURU &amp; KARYAWAN</h2>
   <div class="mb-8">

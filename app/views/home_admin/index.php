@@ -13,6 +13,8 @@
     }
 </style>
 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <a href="<?= BASEURL ?>/home_admin/tambah" class="logout-button">Tambah Data</a>
 <section class="container mx-auto py-8">
 

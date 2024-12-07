@@ -1,4 +1,4 @@
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Cashier Page -->
 <div class="container mt-5">
     <div class="row">

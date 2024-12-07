@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <section class="bg-[#D5D3D3] py-2">
         <div class="container mx-auto ">
             <h2 class="text-2xl font-bold text-gray-700 ml-12">Profil Sekolah</h2>
