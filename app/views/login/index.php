@@ -20,11 +20,9 @@
                     <a href="#" class="text-green-800 hover:underline">Change Password</a>
                 </div>
                 <button type="submit" name="submit" class="w-full bg-green-800 text-white py-2 rounded-lg hover:bg-green-700">Login</button>
-                <?php if (isset($error)): ?>
-                <div class="alert alert-danger">
-                <?= htmlspecialchars($error); ?>
-                </div>
-                <?php endif; ?>
+                <p style="color: red; font-style : italic;">
+                <?= (isset($data['error'])) ? $data['error'] : '' ?>
+                </p>
             </form>
         </div>
     </main>
