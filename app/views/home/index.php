@@ -1,72 +1,24 @@
-<style>
-  /* Add mobile-specific styles here */
-  @media (max-width: 768px) {
-    /* Hero Section */
-    .hero-section {
-      height: 300px; /* adjust height for mobile */
-    }
-
-    /* News Item */
-    .news-item {
-      width: 100%; /* make news items full-width on mobile */
-      margin-bottom: 20px; /* add some spacing between news items */
-    }
-
-    /* Statistics Section */
-    .statistics-section {
-      padding: 20px; /* reduce padding on mobile */
-    }
-
-    /* Carousel */
-    .carousel {
-      height: 200px; /* adjust carousel height for mobile */
-    }
-
-    .carousel-item {
-      width: 100%; /* make carousel items full-width on mobile */
-    }
-
-    /* Counters */
-    .animate-count {
-      margin: 10px; /* reduce margin on mobile */
-    }
-
-    /* Other adjustments */
-    h2 {
-      font-size: 18px; /* reduce font size for mobile */
-    }
-
-    p {
-      font-size: 14px; /* reduce font size for mobile */
-    }
-  }
-
-  /* Add tablet-specific styles here (optional) */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    /* Add styles for tablet screens here */
-  }
-</style>
-
-
 <main class="bg-white">
     <!-- Hero Section -->
     <section class="relative h-screen md:h-[600px] overflow-hidden">
-        <div class="relative w-full h-full">
-            <div class="carousel">
-                <?php foreach ($data['carousel'] as $row) : ?>
-                    <div class="carousel-item">
-                        <img alt="School Banner 1" class="w-full h-full object-cover" src="<?= BASEURL ?>/img/carousel/<?= $row['img'] ?>" />
-                    </div>
-                <?php endforeach; ?>
+            <div class="relative w-full h-full">
+                <div class="carousel">
+                    <?php foreach ($data['carousel'] as $row) : ?>
+                        <div class="carousel-item">
+                            <img alt="School Banner 1" class="w-full h-full object-cover" src="<?= BASEURL ?>/img/carousel/<?= $row['img'] ?>" />
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <button class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="prev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2" id="next">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-    </section>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="text-center text-white">
+                    <h1 class="text-4xl font-bold">SD NEGERI DINOYO 4</h1>
+                    <p class="text-xl font-serif">"TATA TITI TITIS"</p>
+                </div>
+            </div>
+            <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 text text-white p-2">&#10094;</button>
+            <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-white p-2">&#10095;</button>
+        </section>
     <section class="container mx-auto py-8">
         <h2 class="text-center text-2xl font-bold text-[#3C583D] mb-8">
             INFORMASI SD NEGERI DINOYO 4
@@ -135,7 +87,7 @@
                 <div class="animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
                     <!-- Kalau mau ubah tampilan jumlah di dalam data target -->
-                    <p class="text-5xl font-bold" data-target="355">0</p> 
+                    <p class="text-5xl font-bold mb-2" data-target="355">0</p> 
                     <p>Jumlah Peserta Didik</p>
                 </div>
                 <div class="animate-count">

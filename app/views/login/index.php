@@ -1,3 +1,5 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <main class="flex items-center justify-center min-h-screen">
         <div class="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
             <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">Login</h2>

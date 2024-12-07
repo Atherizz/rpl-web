@@ -24,6 +24,7 @@ if(!isset($_SESSION['login'])) {
 
         }
     </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <section class="container mx-auto py-8">
 <a href="<?= BASEURL ?>/manage_ekskul_admin/tambah" class="logout-button">Tambah Data</a>
