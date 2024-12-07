@@ -15,16 +15,17 @@
 
     .dropdown:hover .dropdown-menu {
       display: block;
+      z-index: 10000;
     }
   </style>
  </head>
- <body class="font-roboto">
+ <body class="font-roboto ">
   <!-- Header -->
   <header class="bg-[#3C583D] text-white">
    <div class="container mx-auto flex justify-between items-center py-4 px-4 md:px-8">
     <div class="flex items-center">
      <img alt="School Logo" class="h-10 w-10 mr-2" height="50" src="<?=BASEURL ?>/img/asset/logo-sd.png" width="50"/>
-     <a class="text-xl font-bold" href="#">
+     <a class="text-xl font-bold" href="<?=BASEURL ?>/home">
       <h1 class="text-xl font-bold">
        SDN DINOYO 4
       </h1>
