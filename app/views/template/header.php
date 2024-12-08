@@ -53,7 +53,7 @@
         </a>
         </div>
       </div>
-      <a class="hover:text-gray-300" href="<?=BASEURL ?>/ekstrakulikuler">
+      <a class="hover:text-gray-300" href="<?=BASEURL ?>/ekskul">
         Ekstrakulikuler
       </a>
       <a class="hover:text-gray-300" href="<?=BASEURL ?>/kontak">
