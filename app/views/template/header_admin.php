@@ -57,7 +57,7 @@
       <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/managa_ekskul_admin">
       Manage Ekskul
       </a>
-      <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/logout" onclick="return confirm('apakah anda yakin ingin logout?')">
+      <a class="block py-2 px-4 text-sm hover:bg-red-700" href="<?= BASEURL ?>/logout" onclick="return confirm('apakah anda yakin ingin logout?')">
       Logout
       </a>
     </div>
