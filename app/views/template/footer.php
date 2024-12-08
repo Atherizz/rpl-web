@@ -31,17 +31,17 @@
         </a>
         </li>
         <li>
-        <a class="hover:underline" href="#">
+        <a class="hover:underline" href="<?=BASEURL ?>/berita">
           Kegiatan Sekolah
         </a>
         </li>
         <li>
-        <a class="hover:underline" href="#">
+        <a class="hover:underline" href="<?=BASEURL ?>/visi_misi">
           Visi &amp; Misi
         </a>
         </li>
         <li>
-        <a class="hover:underline" href="#">
+        <a class="hover:underline" href="<?=BASEURL ?>/guru">
           Guru
         </a>
         </li>

@@ -45,12 +45,6 @@
         <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/visi_misi">
           Visi dan Misi
         </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Sejarah
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Kepala Sekolah
-        </a>
         <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/guru">
           Guru
         </a>
@@ -59,28 +53,13 @@
         </a>
         </div>
       </div>
-      <div class="relative dropdown">
-        <a class="hover:text-gray-300 cursor-pointer">
-        Kesiswaan
-        <i class="fas fa-caret-down">
-        </i>
-        </a>
-        <div class="absolute hidden dropdown-menu bg-white text-black mt-2 rounded shadow-lg">
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Kurikulum
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Kegiatan
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/ekskul">
-          Ekstrakulikuler
-        </a>
-        </div>
-      </div>
+      <a class="hover:text-gray-300" href="<?=BASEURL ?>/ekstrakulikuler">
+        Ekstrakulikuler
+      </a>
       <a class="hover:text-gray-300" href="<?=BASEURL ?>/kontak">
         Kontak
       </a>
-      <a class="hover:text-gray-300" href="#">
+      <a class="hover:text-gray-300" href="<?=BASEURL ?>/berita">
         Berita
       </a>
       <a class="hover:text-gray-300" href="<?=BASEURL ?>/login">
@@ -97,7 +76,7 @@
     <div class="hidden md:hidden px-4" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       <div class="relative dropdown">
-        <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#A5CAA0] cursor-pointer">
+        <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#A5CAA0]">
         Tentang Kami
         <i class="fas fa-caret-down">
         </i>
