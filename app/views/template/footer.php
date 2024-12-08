@@ -37,22 +37,20 @@
           </ul>
         </div>
         <div class="text-center md:text-left">
-          <h4 class="text-lg font-bold mb-4">EKSTRAKURIKULER</h4>
+          <h4 class="text-lg font-bold mb-4">KONTAK KAMI</h4>
           <ul>
             <li>
-              <a class="hover:underline" href="#"> Pramuka </a>
+              <a class="hover:underline" href="#"> Email: <EMAIL> </a>
             </li>
             <li>
-              <a class="hover:underline" href="#"> Paskibra </a>
+              <a class="hover:underline" href="#"> Phone: (0341) 559390 </a>
             </li>
             <li>
-              <a class="hover:underline" href="#"> Tari </a>
+              <a class="hover:underline" href="#"> Instagram: @sdnegeridinoyo4 </a>
             </li>
             <li>
-              <a class="hover:underline" href="#"> Pencak Silat </a>
             </li>
           </ul>
-        </div>
       </div>
     </footer>
   </body>

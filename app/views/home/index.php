@@ -174,7 +174,7 @@
     }
     .carousel-item {
         opacity: 0;
-        transition: opacity 0.5s ease-in-out;
+        transition: opacity 2s ease-in-out;
         position: absolute;
         width: 100%;
         height: 100%;
