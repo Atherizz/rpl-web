@@ -6,8 +6,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   </head>
   <body>
-    <footer class="bg-[#455465] text-white py-8">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer class="bg-[#455465] text-white py-8 md:py-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 hidden md:grid">
       <div class="text-center md:text-left">
       <img alt="School Logo" class="mx-auto md:mx-0 mb-4" height="150" src="<?=BASEURL ?>/img/asset/logo-sd.png" width="150"/>
       <h3 class="text-2xl font-bold">
@@ -26,7 +26,7 @@
       </h4>
       <ul>
         <li>
-        <a class="hover:underline" href="#">
+        <a class="hover:underline" href="<?=BASEURL ?>/profil">
           Profil Sekolah
         </a>
         </li>
@@ -38,11 +38,6 @@
         <li>
         <a class="hover:underline" href="#">
           Visi &amp; Misi
-        </a>
-        </li>
-        <li>
-        <a class="hover:underline" href="#">
-          Prestasi
         </a>
         </li>
         <li>
@@ -68,7 +63,7 @@
       </div>
       </div>
     </div>
-    <div class="mt-8 border-t border-gray-700 pt-4">
+    <div class="border-t border-gray-700 pt-4">
       <p class="text-center text-sm">
       © 2023 SD NEGERI DINOYO 4. All rights reserved.
       </p>
