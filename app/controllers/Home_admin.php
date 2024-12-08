@@ -80,9 +80,19 @@ class Home_admin extends Controller
         }
     }
 
-    public function deleteNews($id)
+   public function deleteNews($id)
     {
         if ($this->model('Home_Admin_model')->delete($id) > 0) {
+            $_SESSION['success'] = 'Berhasil Menghapus Data!';
+            header('Location:' . BASEURL . '/home_admin/index');
+        } else {
+            header('Location:' . BASEURL . '/home_admin/index');
+        }
+    } 
+
+    public function deleteCarousel($id)
+    {
+        if ($this->model('Home_Admin_model')->deleteImage($id) > 0) {
             $_SESSION['success'] = 'Berhasil Menghapus Data!';
             header('Location:' . BASEURL . '/home_admin/index');
         } else {
