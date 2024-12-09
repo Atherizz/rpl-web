@@ -2,7 +2,7 @@
 
 <main class="bg-white">
     <!-- Hero Section -->
-    <section class="relative h-screen md:h-[600px] overflow-hidden">
+    <section class="relative h-[420px] md:h-[500px] lg:h-[600px] overflow-hidden">
             <div class="relative w-full h-full">
                 <div class="carousel">
                     <?php foreach ($data['carousel'] as $row) : ?>
@@ -14,7 +14,7 @@
             </div>
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center xl:hidden">
                 <div class="text-center text-white">
-                    <h1 class="text-xl sm:text-2xl md:text-2xl font-bold">SD NEGERI DINOYO 4</h1>
+                    <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">SD NEGERI DINOYO 4</h1>
                     <p class="text-xl font-serif">"TATA TITI TITIS"</p>
                 </div>
             </div>
@@ -26,7 +26,7 @@
             </div>
             <button id="prev" class="absolute top-1/2 left-0 transform -translate-y-1/2 text text-white p-2">&#10094;</button>
             <button id="next" class="absolute top-1/2 right-0 transform -translate-y-1/2 text-white p-2">&#10095;</button>
-        </section>
+    </section>
     <section class="container mx-auto py-8">
         <h2 class="text-center text-2xl font-bold text-[#3C583D] mb-8">
             INFORMASI SD NEGERI DINOYO 4
@@ -130,7 +130,7 @@
                 clearInterval(interval);
                 countElement.textContent = targetNumber;
             }
-        }, 100); // Speed animation
+        }, 15); // Speed animation
     });
     // carousel
     const carousel = document.querySelector('.carousel');
