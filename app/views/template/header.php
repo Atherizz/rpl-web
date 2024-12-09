@@ -48,7 +48,7 @@
         <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/guru">
           Guru
         </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
+        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/sarana_prasarana">
           Sarana Prasarana
         </a>
         </div>
@@ -88,42 +88,21 @@
         <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/visi_misi">
           Visi dan Misi
         </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Sejarah
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Kepala Sekolah
-        </a>
         <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/guru">
           Guru
         </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
+        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/sarana_prasarana">
           Sarana Prasarana
         </a>
         </div>
       </div>
-      <div class="relative dropdown">
-        <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#A5CAA0] cursor-pointer">
-        Kesiswaan
-        <i class="fas fa-caret-down">
-        </i>
-        </a>
-        <div class="hidden dropdown-menu bg-white text-black mt-2 rounded shadow-lg">
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Kurikulum
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="#">
-          Kegiatan
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/ekskul">
-          Ekstrakulikuler
-        </a>
-        </div>
-      </div>
+      <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" href="<?=BASEURL ?>/ekskul">
+        Ekstrakulikuler
+      </a>
       <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" href="<?=BASEURL ?>/kontak">
         Kontak
       </a>
-      <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" href="#">
+      <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" href="<?=BASEURL ?>/berita">
         Berita
       </a>
       <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700" href="<?=BASEURL ?>/login">
