@@ -25,3 +25,11 @@
     <?php endforeach; ?>
   </div>
 </main>
+<style>
+  .img{
+    object-fit: cover;
+    object-position: top center;
+    height: 100%;
+    width: 100%;
+  }
+</style>
