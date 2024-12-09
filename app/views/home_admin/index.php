@@ -42,7 +42,7 @@
                     <p class="text-gray-700">
                         <?= implode(' ', array_slice(explode(' ', $row['word']), 0, 20)) . (str_word_count($row['word']) > 50 ? '...' : ''); ?>
                     </p>
-                    <a class="text-green-800 hover:underline" href="#">
+                    <a class="text-green-800 hover:underline" href="<?= BASEURL; ?>/home_admin/detailNews/<?= $row['id'] ?>">
                         Baca Selengkapnya
                     </a>
                 </div>

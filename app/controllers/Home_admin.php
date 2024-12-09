@@ -85,6 +85,13 @@ class Home_admin extends Controller
         }
     }
 
+
+    public function detailNews($id)
+    {
+        $data['data'] = $this->model('Home_model')->getNewsById($id);
+        $this->view('template/header_admin');
+        $this->view('home_admin/detail', $data);
+    }
    public function deleteNews($id)
     {
         if ($this->model('Home_Admin_model')->delete($id) > 0) {
