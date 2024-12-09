@@ -57,6 +57,14 @@ class manage_ekskul_admin extends Controller
     public function editEkskul($id)
     {
         $data['data'] = $this->model('Ekskul_model')->getEkskulById($id);
+
+        if (empty($data['data'])) {
+            // Redirect or show an error if data is not found
+            $_SESSION['error'] = 'Ekskul not found!';
+            header('Location: ' . BASEURL . '/manage_ekskul_admin/index');
+            exit;
+        }
+        
         $this->view('template/header_admin');
         $this->view('manage_ekskul_admin/edit', $data);
     }
