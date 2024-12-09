@@ -34,25 +34,16 @@
       <nav class="hidden md:flex space-x-4">
       <div class="dropdown">
         <a class="hover:text-gray-300 cursor-pointer">
-        Tentang Kami
-        <i class="fas fa-caret-down">
-        </i>
+          Tentang Kami
+          <i class="fas fa-caret-down"></i>
         </a>
         <div class="absolute hidden dropdown-menu bg-white text-black mt-2 rounded shadow-lg">
-        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/profil">
-          Profil
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/visi_misi">
-          Visi dan Misi
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/guru">
-          Guru
-        </a>
-        <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/sarana_prasarana">
-          Sarana Prasarana
-        </a>
+            <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/profil">Profil</a>
+            <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/visi_misi">Visi dan Misi</a>
+            <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/guru">Guru</a>
+            <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/sarana_prasarana">Sarana Prasarana</a>
         </div>
-      </div>
+    </div>
       <a class="hover:text-gray-300" href="<?=BASEURL ?>/ekskul">
         Ekstrakulikuler
       </a>
@@ -111,15 +102,32 @@
       </div>
     </div>
     </header>
-    <script>
+<script>
     document.getElementById('menu-btn').addEventListener('click', function () {
         var menu = document.getElementById('mobile-menu');
         if (menu.classList.contains('hidden')) {
-          menu.classList.remove('hidden');
+            menu.classList.remove('hidden');
         } else {
-          menu.classList.add('hidden');
+            menu.classList.add('hidden');
         }
-      });
-    </script>
+    });
+
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        let timeout;
+
+        dropdown.addEventListener('mouseenter', function() {
+            clearTimeout(timeout); // Hentikan timeout jika mouse masuk
+            dropdownMenu.classList.remove('hidden');
+        });
+
+        dropdown.addEventListener('mouseleave', function() {
+            // Set timeout untuk menutup dropdown setelah 2 detik
+            timeout = setTimeout(function() {
+                dropdownMenu.classList.add('hidden');
+            }, 30); // 2000 ms = 2 detik
+        });
+    });
+</script>
   </body>
   </html>
