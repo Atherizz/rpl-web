@@ -32,7 +32,7 @@
       </a>
       </div>
       <nav class="hidden md:flex space-x-4">
-      <div class="relative dropdown">
+      <div class="dropdown">
         <a class="hover:text-gray-300 cursor-pointer">
         Tentang Kami
         <i class="fas fa-caret-down">
