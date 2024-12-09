@@ -8,8 +8,8 @@
         CAROUSEL SD NEGERI DINOYO 4
     </h2>
     <?php if (isset($data['info'])) : ?>
-        <p class="text-green-600 hover:underline"><?= $data['info'] ?></p>
-    <?php endif; ?>
+    <p class="text-green-600 hover:underline"><?= $data['info'] ?></p>
+  <?php endif; ?>
     <div class="flex flex-wrap justify-center gap-8">
         <?php foreach ($data['carousel'] as $row) : ?>
             <div class="carousel-item bg-white shadow-md w-80 flex flex-col">

@@ -21,6 +21,11 @@ class Home_admin extends Controller
 
         $offset = ($currentPage - 1) * $newsPerPage;
 
+        if(isset($_SESSION['success'])) {
+            $data['info'] = $_SESSION['success'];
+            unset($_SESSION['success']);
+        }
+
         $data['judul'] = 'Home';
         $data['news'] = $this->model('Home_model')->getAllNews($newsPerPage, $offset);
         $data['carousel'] = $this->model('Home_model')->getAllCarousel();
