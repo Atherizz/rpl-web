@@ -130,7 +130,7 @@
                 clearInterval(interval);
                 countElement.textContent = targetNumber;
             }
-        }, 10); // Speed animation
+        }, 100); // Speed animation
     });
     // carousel
     const carousel = document.querySelector('.carousel');
@@ -159,7 +159,7 @@
         }
     });
     // Auto slide carousel
-    const autoSlideInterval = 2000; // Set the interval time in milliseconds
+    const autoSlideInterval = 6000; // Set the interval time in milliseconds
 
     setInterval(() => {
         items[currentIndex].classList.remove('active');
