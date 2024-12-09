@@ -12,7 +12,13 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center xl:hidden">
+                <div class="text-center text-white">
+                    <h1 class="text-xl sm:text-2xl md:text-2xl font-bold">SD NEGERI DINOYO 4</h1>
+                    <p class="text-xl font-serif">"TATA TITI TITIS"</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden md:hidden sm:hidden xl:grid">
                 <div class="text-center text-white">
                     <h1 class="text-4xl font-bold">SD NEGERI DINOYO 4</h1>
                     <p class="text-xl font-serif">"TATA TITI TITIS"</p>

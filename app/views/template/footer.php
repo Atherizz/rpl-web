@@ -64,9 +64,17 @@
       </div>
     </div>
     <div class="border-t border-gray-700 pt-4">
-      <p class="text-center text-sm">
-      © 2023 SD NEGERI DINOYO 4. All rights reserved.
-      </p>
+        <p class="text-center text-sm">
+            © 2023 SD NEGERI DINOYO 4. All rights reserved.
+        </p>
+        <div class="flex justify-center space-x-4 mt-2 md:hidden" id>
+            <a class="text-white hover:text-gray-400" href="https://youtube.com/@sdnegeridinoyo4841?si=NZp236rj3jYUNPal">
+                <i class="fab fa-youtube fa-x"></i>
+            </a>
+            <a class="text-white hover:text-gray-400" href="https://www.instagram.com/sd_dinoyo4_malang?igsh=MW9hYjVxMXFjamM3eA==">
+                <i class="fab fa-instagram fa-x"></i>
+            </a>
+        </div>
     </div>
     </footer>
   </body>
