@@ -5,7 +5,7 @@
     KONTAK
    </h1>
    <div class="flex flex-col md:flex-row justify-center items-start md:items-center space-y-4 md:space-y-0 md:space-x-8">
-    <div class="w-full md:w-2/3 bg-gray-200 p-4 rounded shadow-lg">
+    <div class="w-full md:w-2/3 p-4">
      <iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.560604360658!2d112.60748271018127!3d-7.940872679060958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78820d170e9ea9%3A0x39cee4afaf1e7d44!2sSDN%20Dinoyo%204%20Malang!5e0!3m2!1sid!2sid!4v1733061672045!5m2!1sid!2sid" style="border:0;" width="600">
      </iframe>
     </div>
