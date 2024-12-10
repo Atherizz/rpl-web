@@ -1,6 +1,6 @@
 <?php 
 
-    class Profile_admin extends Controller {
+    class profile_admin extends Controller {
         private $id;
         private $username;
         // private $password;

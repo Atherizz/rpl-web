@@ -1,6 +1,6 @@
 <?php 
 
-class Ekskul extends Controller {
+class ekskul extends Controller {
 
     public function index() {
         $data['data'] = $this->model('Ekskul_model')->getAllEkskul();

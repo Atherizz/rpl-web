@@ -1,6 +1,6 @@
 <?php 
 
-class Kontak extends Controller {
+class kontak extends Controller {
 
     public function index() {
         $this->view('template/header');

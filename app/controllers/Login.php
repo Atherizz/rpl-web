@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-class Login extends Controller {
+class login extends Controller {
 
     public function __construct()
  {

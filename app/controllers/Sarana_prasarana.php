@@ -1,6 +1,6 @@
 <?php 
 
-class Sarana_prasarana extends Controller {
+class sarana_prasarana extends Controller {
 
 public function index() {
 

@@ -57,7 +57,7 @@
       <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/manage_guru_admin">
       Manage Guru
       </a>
-      <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/managa_ekskul_admin">
+      <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/manage_ekskul_admin">
       Manage Ekskul
       </a>
       <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/profile_admin">
