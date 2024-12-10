@@ -14,8 +14,9 @@
   }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<a href="<?= BASEURL ?>/manage_guru_admin/tambah" class="logout-button">Tambah Data</a>
+  <div class="flex justify-end space-x-4 p-4">
+    <a href="<?= BASEURL ?>/manage_guru_admin/tambah" class="bg-green-700 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-green-700 transition duration-300 mr-">Tambah Data</a>
+  </div>
 <main class="p-8">
 <?php if (isset($data['add'])) : ?>
         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
@@ -52,7 +53,7 @@
       <div class="bg-white p-6 rounded-lg shadow-lg">
         <img
           alt="Profile picture of CIKGU BESAR S.Pd, M.Pd"
-          class="w-24 h-24 mx-auto rounded-full mb-4"
+          class="w-24 h-24 mx-auto rounded-full mb-4 object-cover object-top"
           height="100"
           src="<?= BASEURL ?>/img/guru/<?= $row['img'] ?>"
           width="100" />

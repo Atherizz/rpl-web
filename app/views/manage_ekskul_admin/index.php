@@ -25,9 +25,10 @@ if(!isset($_SESSION['login'])) {
         }
     </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <div class="flex justify-end space-x-4 p-4">
+        <a href="<?= BASEURL ?>/manage_ekskul_admin/tambah" class="bg-green-700 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-green-700 transition duration-300 mr-4">Tambah Data</a>
+    </div>
 <section class="container mx-auto py-8">
-<a href="<?= BASEURL ?>/manage_ekskul_admin/tambah" class="logout-button">Tambah Data</a>
     <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
         EKSTRAKURIKULER SD NEGERI DINOYO 4
     </h2>
