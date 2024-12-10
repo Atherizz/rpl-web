@@ -1,16 +1,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <main class="container mx-auto mt-8 flex">
-  <section class="w-2/3 bg-white p-6 rounded-lg shadow-md">
+  <section class="w-full lg:w-3/4 bg-white p-6 rounded-lg shadow-md">
     <a href="<?= BASEURL ?>/home/" class="text-green-800 hover:underline">Kembali</a>
     <h2 class="text-2xl font-bold mb-4">
       <?= $data['news']['title'] ?>
     </h2>
     <img
       alt="School Building"
-      class="w-full mb-4 rounded-lg"
-      height="400"
+      class="w-full mb-4 rounded-lg h-[15rem] xs:h-[20rem] sm:h-[25rem] md:h-[30rem] xl:h-[] object-cover object-center"
+      height="200"
       src="<?= BASEURL; ?>/img/news/<?= $data['news']['img'] ?>"
-      width="600" />
+      width="400" />
     <p class="text-gray-500 text-sm"><?= $data['news']['date'] ?></p>
     <p class="mb-4">
       <?= $data['news']['word']; ?>
