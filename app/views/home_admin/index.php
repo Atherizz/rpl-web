@@ -2,7 +2,7 @@
 <div class="flex justify-end space-x-4 p-4">
         <a href="<?= BASEURL ?>/home_admin/tambah" class="bg-green-700 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-green-700 transition duration-300">Tambah Berita</a>
         <a href="<?= BASEURL ?>/home_admin/tambahCarousel" class="bg-green-700 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-green-700 transition duration-300">Tambah Carousel</a>
-    </div>
+</div>
     <?php if (isset($data['add'])) : ?>
         <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 max-w-xl mx-auto rounded-lg shadow-lg relative" role="alert">
             <div class="flex items-center">
