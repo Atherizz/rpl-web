@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-class Logout extends Controller {
+class logout extends Controller {
 
     public function index() {
         session_destroy();

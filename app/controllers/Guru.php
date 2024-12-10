@@ -1,6 +1,6 @@
 <?php 
 
-class Guru extends Controller {
+class guru extends Controller {
  
     public function index() {
         $data['guru'] = $this->model('Guru_model')->getAllTeacher();

@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-class Home_admin extends Controller
+class home_admin extends Controller
 {
     public function __construct(){
         if(!isset($_SESSION['login'])) {

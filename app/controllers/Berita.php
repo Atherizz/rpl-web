@@ -1,6 +1,6 @@
 <?php 
 
-class Berita extends Controller {
+class berita extends Controller {
 
 public function index() {
 

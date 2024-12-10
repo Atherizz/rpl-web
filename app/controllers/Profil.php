@@ -1,6 +1,6 @@
 <?php 
 
-class Profil extends Controller {
+class profil extends Controller {
 
 public function index() {
 
