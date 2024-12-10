@@ -1,6 +1,6 @@
 <?php
 
-class Visi_Misi extends Controller
+class visi_misi extends Controller
 {
 
     public function index()

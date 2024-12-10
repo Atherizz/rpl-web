@@ -3,14 +3,62 @@
         <a href="<?= BASEURL ?>/home_admin/tambah" class="bg-green-700 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-green-700 transition duration-300">Tambah Berita</a>
         <a href="<?= BASEURL ?>/home_admin/tambahCarousel" class="bg-green-700 text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-green-700 transition duration-300">Tambah Carousel</a>
     </div>
-<section class="container mx-auto py-8">
+    <?php if (isset($data['add'])) : ?>
+        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 max-w-xl mx-auto rounded-lg shadow-lg relative" role="alert">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-check-circle text-green-500"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-bold"><?= $data['add'] ?></p>
+                </div>
+                <div class="ml-auto">
+                    <button class="text-green-500 hover:text-green-700" onclick="closeAlert(event)">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($data['delete'])) : ?>
+        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 max-w-xl mx-auto rounded-lg shadow-lg relative" role="alert">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-check-circle text-red-500"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-bold"><?= $data['delete'] ?></p>
+                </div>
+                <div class="ml-auto">
+                    <button class="text-red-500 hover:text-red-700" onclick="closeAlert(event)">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($data['edit'])) : ?>
+        <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 max-w-xl mx-auto rounded-lg shadow-lg relative" role="alert">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <i class="fas fa-check-circle text-blue-500"></i>
+                </div>
+                <div class="ml-3">
+                    <p class="font-bold"><?= $data['edit'] ?></p>
+                </div>
+                <div class="ml-auto">
+                    <button class="text-blue-500 hover:text-blue    -700" onclick="closeAlert(event)">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+<section class="container mx-auto py-8 mt-8">
     <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
         CAROUSEL SD NEGERI DINOYO 4
     </h2>
-    <?php if (isset($data['info'])) : ?>
-    <p class="text-green-600 hover:underline"><?= $data['info'] ?></p>
-  <?php endif; ?>
-    <div class="flex flex-wrap justify-center gap-8">
+    <div class="flex flex-wrap justify-center gap-8 mt-5">
         <?php foreach ($data['carousel'] as $row) : ?>
             <div class="carousel-item bg-white shadow-md w-80 flex flex-col">
                 <img
@@ -72,3 +120,10 @@
         padding: 10px 0;
     }
 </style>
+<script>
+        function closeAlert(event) {
+            const alert = event.target.closest('[role="alert"]');
+            alert.style.opacity = '0';
+            setTimeout(() => alert.remove(), 300);
+        }
+</script>

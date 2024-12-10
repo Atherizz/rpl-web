@@ -31,8 +31,29 @@ if(!isset($_SESSION['login'])) {
     <h2 class="text-center text-2xl font-bold text-green-800 mb-8">
         EKSTRAKURIKULER SD NEGERI DINOYO 4
     </h2>
-    <?php if (isset($data['info'])) : ?>
-        <p class="text-green-600 hover:underline"><?= $data['info'] ?></p>
+    <?php if (isset($data['add'])) : ?>
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <strong class="font-bold"><?= $data['add'] ?></strong>
+            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <i class="fas fa-times cursor-pointer" onclick="closeAlert(event)"></i>
+            </span>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($data['delete'])) : ?>
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <strong class="font-bold"><?= $data['delete'] ?></strong>
+            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <i class="fas fa-times cursor-pointer" onclick="closeAlert(event)"></i>
+            </span>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($data['edit'])) : ?>
+        <div class="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded relative mb-4" role="alert">
+            <strong class="font-bold"><?= $data['edit'] ?></strong>
+            <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+            <i class="fas fa-times cursor-pointer" onclick="closeAlert(event)"></i>
+            </span>
+        </div>
     <?php endif; ?>
     <div class="flex flex-wrap justify-center gap-8">
         <!-- News Item -->

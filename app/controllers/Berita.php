@@ -1,6 +1,6 @@
 <?php 
 
-class Berita extends Controller {
+class berita extends Controller {
 
 public function index() {
 
@@ -8,7 +8,6 @@ public function index() {
 
     $this->view('template/header');
     $this->view('berita/index', $data);
-    $this->view('template/footer');
 }
 
 

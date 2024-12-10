@@ -1,5 +1,5 @@
 <?php
-class Kesiswaan extends Controller
+class kesiswaan extends Controller
 {
 
     public function index()

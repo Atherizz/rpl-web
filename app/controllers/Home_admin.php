@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-class Home_admin extends Controller
+class home_admin extends Controller
 {
     public function __construct(){
         if(!isset($_SESSION['login'])) {
@@ -22,9 +22,18 @@ class Home_admin extends Controller
         $offset = ($currentPage - 1) * $newsPerPage;
 
         if(isset($_SESSION['success'])) {
-            $data['info'] = $_SESSION['success'];
+            $data['add'] = $_SESSION['success'];
             unset($_SESSION['success']);
         }
+        if(isset($_SESSION['delete'])) {
+            $data['delete'] = $_SESSION['delete'];
+            unset($_SESSION['delete']);
+        }
+        if(isset($_SESSION['edit'])) {
+            $data['edit'] = $_SESSION['edit'];
+            unset($_SESSION['edit']);
+        }
+
 
         $data['judul'] = 'Home';
         $data['news'] = $this->model('Home_model')->getAllNews($newsPerPage, $offset);
@@ -34,11 +43,6 @@ class Home_admin extends Controller
         $data['totalPages'] = ceil($totalNews / $newsPerPage);
         $data['currentPage'] = $currentPage;
 
-
-        // if(isset($_SESSION['success'])) {
-        //     $data['info'] = $_SESSION['success'];
-        //     unset($_SESSION['success']);
-        // }
 
         $this->view('template/header_admin', $data);
         $this->view('home_admin/index', $data);
@@ -59,7 +63,7 @@ class Home_admin extends Controller
 
     public function uploadNews()
     {
-        $model = $this->model('Home_Admin_Model');
+        $model = $this->model('Home_Admin_model');
         $result = $model->addNews($_POST);
         if ($result == 0) {
             $error = $model->error;
@@ -92,10 +96,10 @@ class Home_admin extends Controller
         $this->view('template/header_admin');
         $this->view('home_admin/detail', $data);
     }
-   public function deleteNews($id)
+    public function deleteNews($id)
     {
         if ($this->model('Home_Admin_model')->delete($id) > 0) {
-            $_SESSION['success'] = 'Berhasil Menghapus Data!';
+            $_SESSION['delete'] = 'Berhasil Menghapus Data!';
             header('Location:' . BASEURL . '/home_admin/index');
         } else {
             header('Location:' . BASEURL . '/home_admin/index');
@@ -105,7 +109,7 @@ class Home_admin extends Controller
     public function deleteCarousel($id)
     {
         if ($this->model('Home_Admin_model')->deleteImage($id) > 0) {
-            $_SESSION['success'] = 'Berhasil Menghapus Data!';
+            $_SESSION['delete'] = 'Berhasil Menghapus Data!';
             header('Location:' . BASEURL . '/home_admin/index');
         } else {
             header('Location:' . BASEURL . '/home_admin/index');
@@ -124,7 +128,7 @@ class Home_admin extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result =  $this->model('Home_Admin_model')->edit($_POST);
             if ($result > 0) {
-                $_SESSION['success'] = 'Berhasil Mengedit Data!';
+                $_SESSION['edit'] = 'Berhasil Mengedit Data!';
                 header('Location: ' . BASEURL . '/home_admin/index');
                 exit;
             } else {

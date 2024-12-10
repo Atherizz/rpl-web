@@ -1,6 +1,6 @@
 <?php 
 
-class Manage_guru_admin extends Controller {
+class manage_guru_admin extends Controller {
 
     public function __construct(){
         if(!isset($_SESSION['login'])) {
