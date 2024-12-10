@@ -37,7 +37,7 @@
         Manage Ekskul
       </a>
       <a class="hover:text-gray-300" href="<?= BASEURL ?>/profile_admin">
-        Profile
+        Profil
       </a>
       <a class="hover:text-red-300" href="<?= BASEURL ?>/logout" onclick="return confirm('apakah anda yakin ingin logout?')">
         Logout
@@ -59,6 +59,9 @@
       </a>
       <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/managa_ekskul_admin">
       Manage Ekskul
+      </a>
+      <a class="block py-2 px-4 text-sm hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/profile_admin">
+      Profil
       </a>
       <a class="block py-2 px-4 text-sm hover:bg-red-700" href="<?= BASEURL ?>/logout" onclick="return confirm('apakah anda yakin ingin logout?')">
       Logout
