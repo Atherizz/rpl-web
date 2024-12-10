@@ -36,6 +36,9 @@
       <a class="hover:text-gray-300" href="<?= BASEURL ?>/manage_ekskul_admin">
         Manage Ekskul
       </a>
+      <a class="hover:text-gray-300" href="<?= BASEURL ?>/profile_admin">
+        Profile
+      </a>
       <a class="hover:text-red-300" href="<?= BASEURL ?>/logout" onclick="return confirm('apakah anda yakin ingin logout?')">
         Logout
       </a>

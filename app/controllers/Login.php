@@ -36,6 +36,8 @@ class Login extends Controller {
                 setcookie("password", $result['password'], time() + 3600);
             }
             $_SESSION['login'] = true;
+            $_SESSION["id"] = $result["id"];
+            $_SESSION["username"] = $result["username"];
             header('Location: ' . BASEURL . '/home_admin');
             exit;
         } else {
