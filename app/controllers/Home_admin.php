@@ -63,7 +63,7 @@ class Home_admin extends Controller
 
     public function uploadNews()
     {
-        $model = $this->model('Home_Admin_Model');
+        $model = $this->model('Home_Admin_model');
         $result = $model->addNews($_POST);
         if ($result == 0) {
             $error = $model->error;
