@@ -17,7 +17,7 @@
             <div class="lg:w-3/4">
             <?php foreach ($data['news'] as $row) : ?> 
                 <div class="mb-8">
-                    <img alt="Event at SDN Dinoyo 4" class="w-full rounded-lg mb-4" height="400" src="<?= BASEURL ?>/img/news/<?= $row['img'] ?>" width="800"/>
+                    <img alt="Event at SDN Dinoyo 4" class="w-full rounded-lg mb-4 sm:h-[400px] md:h-[420px] lg:h-[500px] object-cover object-center" height="400" src="<?= BASEURL ?>/img/news/<?= $row['img'] ?>" width="800"/>
                     <h3 class="text-xl font-semibold"><?= $row['title'] ?></h3>
                     <p class="text-gray-600"><?= $row['date'] ?></p>
                     <a class="text-green-600 hover:underline" href="<?= BASEURL ?>/home/detail/<?= $row['id']?>">READ MORE <i class="fas fa-arrow-right"></i></a>
@@ -28,7 +28,7 @@
                 <h3 class="text-xl font-bold mb-4">Terbaru</h3>
                 <?php foreach ($data['news'] as $row) : ?> 
                 <div class="mb-4">
-                    <img alt="Event at SDN Dinoyo 4" class="w-full rounded-lg mb-2" 
+                    <img alt="Event at SDN Dinoyo 4" class="w-full rounded-lg mb-2 object-cover object-center" 
                     height="100" src="<?= BASEURL ?>/img/news/<?= $row['img'] ?>" width="200"/>
                     <h4 class="text-lg font-semibold"><?= $row['title'] ?></h4>
                     <p class="text-gray-600 text-sm"><?= $row['date'] ?></p>
