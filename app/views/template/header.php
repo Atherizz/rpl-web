@@ -40,7 +40,7 @@
         <div class="absolute hidden dropdown-menu bg-white text-black mt-2 rounded shadow-lg">
             <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/profil">Profil</a>
             <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/visi_misi">Visi dan Misi</a>
-            <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/guru">Guru</a>
+            <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/guru">Guru dan Karyawan</a>
             <a class="block px-4 py-2 hover:bg-gray-200" href="<?=BASEURL ?>/sarana_prasarana">Sarana Prasarana</a>
         </div>
     </div>
@@ -80,7 +80,7 @@
           Visi dan Misi
         </a>
         <a class="block px-4 py-2 hover:bg-[#A5CAA0]" href="<?=BASEURL ?>/guru">
-          Guru
+          Guru dan Karyawan
         </a>
         <a class="block px-4 py-2 hover:bg-[#A5CAA0]" href="<?=BASEURL ?>/sarana_prasarana">
           Sarana Prasarana
