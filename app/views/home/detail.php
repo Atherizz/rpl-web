@@ -18,21 +18,21 @@
   </section>
 
   <aside class="lg:w-1/4 lg:pl-8 hidden lg:block">
-                <h3 class="text-xl font-bold mb-4">Terbaru</h3>
-                <?php
+    <h3 class="text-xl font-bold mb-4">Terbaru</h3>
+    <?php
     $count = 0; // Inisialisasi counter
     foreach ($data['list'] as $row) :
       if ($count >= 10) break; // Hentikan setelah 10 iterasi
-    ?> 
-                <div class="mb-4">
-                    <img alt="Event at SDN Dinoyo 4" class="w-full rounded-lg mb-2" height="100" src="<?= BASEURL ?>/img/news/<?= $row['img'] ?>" width="200"/>
-                    <h4 class="text-lg font-semibold"><?= $row['title'] ?></h4>
-                    <p class="text-gray-600 text-sm"><?= $row['date'] ?></p>
-                    <a class="text-green-600 text-sm hover:underline" href="<?= BASEURL ?>/home/detail/<?= $row['id']?>">Read More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <?php
+    ?>
+      <div class="mb-4">
+        <img alt="Event at SDN Dinoyo 4" class="w-full rounded-lg mb-2" height="100" src="<?= BASEURL ?>/img/news/<?= $row['img'] ?>" width="200" />
+        <h4 class="text-lg font-semibold"><?= $row['title'] ?></h4>
+        <p class="text-gray-600 text-sm"><?= $row['date'] ?></p>
+        <a class="text-green-600 text-sm hover:underline" href="<?= BASEURL ?>/home/detail/<?= $row['id'] ?>">Read More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    <?php
       $count++; // Increment counter
     endforeach;
-      ?>
-    </aside>
+    ?>
+  </aside>
 </main>
