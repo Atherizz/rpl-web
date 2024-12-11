@@ -25,7 +25,6 @@
                         <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-green-800 focus:ring-green-800 border-gray-300 rounded">
                         <label for="remember" class="ml-2 block text-gray-700">Remember me</label>
                     </div>
-                    <a href="#" class="text-green-800 hover:underline">Change Password</a>
                 </div>
                 <button type="submit" name="submit" class="w-full bg-green-800 text-white py-2 rounded-lg hover:bg-green-700">Login</button>
                 <p style="color: red; font-style : italic;">
