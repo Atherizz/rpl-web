@@ -95,18 +95,18 @@
                 <div class="animate-count">
                     <i class="fas fa-user-graduate text-4xl mb-2"> </i>
                     <!-- Kalau mau ubah tampilan jumlah di dalam data target -->
-                    <p class="text-5xl font-bold mb-2" data-target="355">0</p> 
+                    <p class="text-5xl font-bold mb-2" data-target="142">0</p> 
                     <p>Jumlah Peserta Didik</p>
                 </div>
                 <div class="animate-count">
                     <i class="fas fa-chalkboard-teacher text-4xl mb-2"> </i>
-                    <p class="text-5xl font-bold mb-2" data-target="24">0</p>
-                    <p>Jumlah Guru</p>
+                    <p class="text-5xl font-bold mb-2" data-target="10">0</p>
+                    <p>Jumlah Guru & Karyawan</p>
                 </div>
                 <div class="animate-count">
                     <i class="fas fa-users text-4xl mb-2"> </i>
-                    <p class="text-5xl font-bold mb-2" data-target="12">0</p>
-                    <p>Jumlah Karyawan</p>
+                    <p class="text-5xl font-bold mb-2" data-target="4">0</p>
+                    <p>Jumlah Pembina Ekskul</p>
                 </div>
             </div>
         </div>
