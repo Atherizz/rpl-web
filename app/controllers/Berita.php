@@ -1,15 +1,12 @@
-<?php 
+<?php
 
-class berita extends Controller {
+class berita extends Controller
+{
+    public function index()
+    {
+        $data['news'] = $this->model('Home_model')->getAllNews();
 
-public function index() {
-
-    $data['news'] = $this->model('Home_model')->getAllNews();
-
-    $this->view('template/header');
-    $this->view('berita/index', $data);
-}
-
-
-
+        $this->view('template/header');
+        $this->view('berita/index', $data);
+    }
 }
