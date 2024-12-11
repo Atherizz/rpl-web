@@ -100,7 +100,7 @@
                 </div>
                 <div class="animate-count">
                     <i class="fas fa-chalkboard-teacher text-4xl mb-2"> </i>
-                    <p class="text-5xl font-bold mb-2" data-target="9">0</p>
+                    <p class="text-5xl font-bold mb-2" data-target="10">0</p>
                     <p>Jumlah Guru & Karyawan</p>
                 </div>
                 <div class="animate-count">
