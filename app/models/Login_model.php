@@ -27,7 +27,7 @@ class Login_model
         $username = $user['username'];
         $password = $user['password'];
 
-        $queryFindUser = "SELECT * FROM user WHERE username = :username";
+        $queryFindUser = "SELECT * FROM user WHERE username = :username COLLATE utf8mb4_bin";
         $this->db->query($queryFindUser);
         $this->db->bind('username', $username);
         $ambilUser = $this->db->single();
@@ -37,9 +37,12 @@ class Login_model
             if ($hashPass == $ambilUser['password']) {
                 return $ambilUser;
             } else {
-                $this->error = "Username atau password salah.";
+                $this->error = "password salah.";
                 return false;
             }
+        } else {
+            $this->error = "username salah.";
+            return false;
         }
         return false;
     }
