@@ -7,7 +7,7 @@
         </h1>
         <div class="bg-white rounded-lg shadow-md p-6">
             <form method="POST" action="<?= BASEURL ?>/manage_guru_admin/editById" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="<?=$data['guru']['id'] ?>">
+                <input type="hidden" name="id" value="<?= $data['guru']['id'] ?>">
                 <div class="mb-4">
                     <label
                         class="block text-gray-700 text-sm font-bold mb-2"
@@ -17,7 +17,7 @@
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="nama_ekskul" name="nama"
-                        type="text" value="<?=$data['guru']['nama'] ?>"
+                        type="text" value="<?= $data['guru']['nama'] ?>"
                         placeholder="Masukkan nama guru" />
                 </div>
                 <div class="mb-4">
@@ -28,8 +28,8 @@
                     </label>
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        id="pembina" name="jabatan" value="<?=$data['guru']['jabatan'] ?>"
-                        type="text" 
+                        id="pembina" name="jabatan" value="<?= $data['guru']['jabatan'] ?>"
+                        type="text"
                         placeholder="Masukkan nama pembina ekskul" />
                 </div>
                 <div class="mb-4">
@@ -42,7 +42,8 @@
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="gambar"
                         type="file" name="img"
-                        accept="image/*" required />
+                        accept=".jpg,.jpeg,.png"
+                        required />
                 </div>
                 <div class="flex items-center justify-between">
                     <button
@@ -51,10 +52,9 @@
                         Simpan
                     </button>
                     <a
-                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                     href="<?=BASEURL?>/manage_guru_admin/index"
-                    >
-                    Batal
+                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        href="<?= BASEURL ?>/manage_guru_admin/index">
+                        Batal
                     </a>
                 </div>
             </form>
