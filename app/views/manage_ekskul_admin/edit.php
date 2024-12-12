@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-if(!isset($_SESSION['login'])) {
+if (!isset($_SESSION['login'])) {
     header('Location: ' . BASEURL . '/login/index');
     exit;
 }
@@ -53,7 +53,8 @@ if(!isset($_SESSION['login'])) {
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="gambar" value="<?= $data['data']['img'] ?>"
                         type="file" name="img"
-                        accept="image/*" required />
+                        accept=".jpg,.jpeg,.png"
+                        required />
                 </div>
                 <div class="mb-4">
                     <label
@@ -75,10 +76,9 @@ if(!isset($_SESSION['login'])) {
                         Simpan
                     </button>
                     <a
-                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                     href="<?=BASEURL?>/manage_ekskul_admin/index"
-                    >
-                    Batal
+                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        href="<?= BASEURL ?>/manage_ekskul_admin/index">
+                        Batal
                     </a>
                 </div>
             </form>

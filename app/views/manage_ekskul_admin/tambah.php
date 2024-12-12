@@ -29,7 +29,7 @@
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="pembina" name="pembina"
-                        type="text" 
+                        type="text"
                         placeholder="Masukkan nama pembina ekskul" />
                 </div>
                 <div class="mb-4">
@@ -42,7 +42,8 @@
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         id="gambar"
                         type="file" name="img"
-                        accept="image/*" required />
+                        accept=".jpg,.jpeg,.png"
+                        required />
                 </div>
                 <div class="mb-4">
                     <label
@@ -64,10 +65,9 @@
                         Simpan
                     </button>
                     <a
-                    class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                     href="<?=BASEURL?>/manage_ekskul_admin/index"
-                    >
-                    Batal
+                        class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        href="<?= BASEURL ?>/manage_ekskul_admin/index">
+                        Batal
                     </a>
                 </div>
             </form>
