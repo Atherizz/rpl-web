@@ -5,7 +5,7 @@
     <title>
       SDN Dinoyo 4
     </title>
-    <link rel="icon" href="<?=BASEURL; ?>/img/asset/logo-sd.png">
+    <link rel="icon" href="<?= BASEURL; ?>/img/asset/logo-sd.png">
     <script src="https://cdn.tailwindcss.com">
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -69,13 +69,13 @@
       </div>
       <div class="hidden md:hidden px-4" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <div class="relative dropdown">
+          <div id="toggle-dropdown" class="relative dropdown">
             <a class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-[#A5CAA0]">
               Tentang Kami
               <i class="fas fa-caret-down">
               </i>
             </a>
-            <div class="hidden dropdown-menu bg-white text-black mt-2 rounded shadow-lg">
+            <div id="dropdown-menu-mbl" class="hidden bg-white text-black mt-2 rounded shadow-lg">
               <a class="block px-4 py-2 hover:bg-[#A5CAA0]" href="<?= BASEURL ?>/profil">
                 Profil
               </a>
@@ -114,6 +114,27 @@
           menu.classList.add('hidden');
         }
       });
+      // Tombol "Tentang Kami" dan menu dropdown
+      const toggleDropdownBtn = document.getElementById('toggle-dropdown');
+      const dropdownMenu = document.getElementById('dropdown-menu-mbl');
+
+      // Event listener untuk membuka/menutup menu dropdown
+      toggleDropdownBtn.addEventListener('click', function() {
+        if (dropdownMenu.classList.contains('hidden')) {
+          dropdownMenu.classList.remove('hidden'); // Tampilkan dropdown
+        } else {
+          dropdownMenu.classList.add('hidden'); // Sembunyikan dropdown
+        }
+      });
+
+      // Tambahkan logika untuk menutup dropdown ketika klik di luar area dropdown
+      document.addEventListener('click', function(event) {
+        const isClickInside = toggleDropdownBtn.contains(event.target) || dropdownMenu.contains(event.target);
+        if (!isClickInside) {
+          dropdownMenu.classList.add('hidden'); // Sembunyikan dropdown
+        }
+      });
+
 
       document.querySelectorAll('.dropdown').forEach(function(dropdown) {
         const dropdownMenu = dropdown.querySelector('.dropdown-menu');
