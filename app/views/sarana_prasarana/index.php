@@ -49,6 +49,13 @@
             <div id="panggung" class="hidden bg-[EBF7F5] p-4 rounded-lg shadow-md">
             <img alt="Library with bookshelves and reading area" class="w-full h-auto rounded-lg mb-4" height="500" src="<?= BASEURL; ?>/img/sarpras/Panggung.jpg" width="600"/>
             </div>
+            <button class="w-full bg-[B7DCB8] text-bold p-4 rounded-lg flex justify-between items-center" onclick="toggleContent('panggung')">
+                <span>KANTIN</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div id="kantin" class="hidden bg-[EBF7F5] p-4 rounded-lg shadow-md">
+            <img alt="Library with bookshelves and reading area" class="w-full h-auto rounded-lg mb-4" height="500" src="<?= BASEURL; ?>/img/sarpras/Kantin.jpg" width="600"/>
+            </div>
         </div>
     </main>
     <script>
